@@ -201,7 +201,7 @@ export default function Navbar() {
       <style>
         {`
           .marquee-track {
-            animation: marquee 18s linear infinite;
+            animation: marquee 13s linear infinite;
           }
           @keyframes marquee {
             0% { transform: translateX(0); }

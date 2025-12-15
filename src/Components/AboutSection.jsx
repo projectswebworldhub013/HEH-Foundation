@@ -11,7 +11,7 @@ import {
 import { Link } from "react-router-dom";
 
 // Background & Logo
-import aboutBg from "../assets/images/hands.jpg";
+import aboutBg from "../assets/images/gallery/g1.jpg";
 import logo from "../assets/images/new-heh.png";
 
 const AboutSection = () => {

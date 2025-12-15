@@ -1,34 +1,49 @@
-import React, { useState } from "react";
+// src/components/HeroSection.jsx
+import React, { useState, useEffect } from "react";
 import { Play, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 
 // Hero images
-import hero1 from "../assets/images/hero/h1.jpg"; // Education
-import hero2 from "../assets/images/hero/h2.jpg"; // Healthcare
-import hero3 from "../assets/images/hero/h3.jpg"; // Hunger Relief
+import hero1 from "../assets/images/gallery/g2.jpg"; // Education
+import hero2 from "../assets/images/gallery/g1.jpg"; // Healthcare
+import hero3 from "../assets/images/gallery/g3.jpg"; // Hunger Relief
+import hero4 from "../assets/images/gallery/g4.jpg"; // Community Support
+import hero5 from "../assets/images/gallery/g5.jpg"; // Volunteer Work
 
-// Background overlay
+// Background
 import bgHero from "../assets/images/bg.avif";
 
 const SLIDES = [
   {
     src: hero1,
-    title: "Education for Every Child",
+    title: "Education for All",
     subtitle:
-      "We empower underprivileged children through quality education, digital learning, and school support.",
+      "Empowering children and adults through quality education and digital learning.",
   },
   {
     src: hero2,
     title: "Healthcare & Nutrition",
     subtitle:
-      "Ensuring access to medical care, nutrition, and healthy lives for vulnerable communities.",
+      "Providing medical care, nutrition support, and health awareness programs.",
   },
   {
     src: hero3,
-    title: "Ending Hunger with Compassion",
+    title: "Ending Hunger",
     subtitle:
-      "Providing meals, ration support, and emergency relief to families in need.",
+      "Ensuring no one sleeps hungry through meal programs and ration drives.",
+  },
+  {
+    src: hero4,
+    title: "Community Development",
+    subtitle:
+      "Strengthening families and communities through sustainable initiatives.",
+  },
+  {
+    src: hero5,
+    title: "Volunteer & Humanity",
+    subtitle:
+      "Mobilizing volunteers to serve humanity with compassion and dignity.",
   },
 ];
 
@@ -37,6 +52,22 @@ export default function HeroSection() {
   const [fade, setFade] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
 
+  // 🔁 AUTO SLIDE
+  useEffect(() => {
+    if (showVideo) return;
+
+    const interval = setInterval(() => {
+      setFade(true);
+      setTimeout(() => {
+        setActive((prev) => (prev + 1) % SLIDES.length);
+        setFade(false);
+      }, 300);
+    }, 5000); // 5 seconds
+
+    return () => clearInterval(interval);
+  }, [showVideo]);
+
+  // Manual change
   const handleImageChange = (idx) => {
     if (idx === active) return;
     setFade(true);
@@ -50,7 +81,7 @@ export default function HeroSection() {
     <section className="relative w-full bg-[#F9FAF7] px-6 md:px-12 lg:px-20 py-20 overflow-hidden">
       {/* Background */}
       <div
-        className="absolute inset-0 z-[-1] bg-cover bg-center "
+        className="absolute inset-0 z-[-1] bg-cover bg-center"
         style={{ backgroundImage: `url(${bgHero})` }}
       />
 
@@ -61,7 +92,7 @@ export default function HeroSection() {
             HEH FOUNDATION
           </span>
 
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-[#0B1F33]">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-[#0B1F33]">
             Together We Fight{" "}
             <span className="text-[#DC2626]">Hunger</span>,{" "}
             <span className="text-[#F47A1F]">Ignorance</span> &{" "}
@@ -69,13 +100,13 @@ export default function HeroSection() {
           </h1>
 
           <p className="mt-5 text-[#374151] max-w-xl">
-            HEH Foundation works to uplift children and vulnerable communities
-            through <strong>Education</strong>, <strong>Healthcare</strong>,
-            <strong> Nutrition</strong>, and <strong>Humanitarian support</strong>.
-            Every contribution creates real impact.
+            HEH Foundation uplifts vulnerable individuals and communities through
+            <strong> education</strong>, <strong>healthcare</strong>,
+            <strong> nutrition</strong>, and
+            <strong> humanitarian action</strong>.
           </p>
 
-          {/* CTAs */}
+          {/* CTA */}
           <div className="flex flex-wrap gap-4 mt-8">
             <Link to="/donate">
               <button className="bg-[#E8590C] hover:bg-[#DC2626] text-white font-semibold px-7 py-3 rounded-lg shadow-lg transition">
@@ -97,11 +128,11 @@ export default function HeroSection() {
             </button>
           </div>
 
-          {/* IMPACT STATS */}
+          {/* IMPACT */}
           <div className="flex flex-wrap gap-10 mt-10">
             <div>
               <p className="text-2xl font-bold text-[#16A34A]">10,000+</p>
-              <p className="text-sm text-[#374151]">Children Supported</p>
+              <p className="text-sm text-[#374151]">People Supported</p>
             </div>
             <div>
               <p className="text-2xl font-bold text-[#16A34A]">50+</p>
@@ -109,7 +140,7 @@ export default function HeroSection() {
             </div>
             <div>
               <p className="text-2xl font-bold text-[#16A34A]">25,000+</p>
-              <p className="text-sm text-[#374151]">Meals Distributed</p>
+              <p className="text-sm text-[#374151]">Meals Served</p>
             </div>
           </div>
         </div>
@@ -128,16 +159,16 @@ export default function HeroSection() {
 
           {/* Badge */}
           <div className="absolute top-4 left-4 bg-[#F47A1F] text-white px-4 py-1 rounded-full text-xs font-semibold">
-            Making Lives Better
+            Creating Real Impact
           </div>
 
           {/* Thumbnails */}
-          <div className="flex gap-4 mt-5 justify-center">
+          <div className="flex gap-3 mt-5 justify-center">
             {SLIDES.map((item, idx) => (
               <button
                 key={idx}
                 onClick={() => handleImageChange(idx)}
-                className={`w-20 h-20 rounded-lg overflow-hidden border-2 transition ${
+                className={`w-16 h-16 rounded-lg overflow-hidden border-2 transition ${
                   active === idx
                     ? "border-[#DC2626] scale-105"
                     : "border-[#E5E7EB]"
@@ -175,9 +206,9 @@ export default function HeroSection() {
           >
             <motion.div
               className="relative w-[90%] max-w-3xl bg-white rounded-2xl overflow-hidden"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              exit={{ scale: 0.8 }}
             >
               <button
                 onClick={() => setShowVideo(false)}

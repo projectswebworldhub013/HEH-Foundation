@@ -19,10 +19,10 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import { Link } from "react-router-dom";
 
 // ✅ NGO Hero Images (education, health, humanitarian)
-import hero1 from "../assets/images/hero/h1.jpg";
+import hero1 from "../assets/images/hero/h3.jpg";
 import hero2 from "../assets/images/hero/h2.jpg";
-import hero3 from "../assets/images/hero/h3.jpg";
-import hero4 from "../assets/images/hero/about-hero.jpg";
+import hero3 from "../assets/images/hero/h1.jpg";
+import hero4 from "../assets/images/gallery/g1.jpg";
 
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -158,11 +158,11 @@ export default function Hero() {
       </div>
 
       {/* Mobile Slider */}
-      <div className="absolute bottom-16 w-full px-6 md:hidden z-20">
+      <div className="absolute bottom-8 w-full px-6 md:hidden z-20">
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={16}
-          slidesPerView={1.1}
+          slidesPerView={1}
           pagination={{ clickable: true }}
           autoplay={{ delay: 4000 }}
         >
