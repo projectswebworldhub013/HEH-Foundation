@@ -1,0 +1,13 @@
+| Purpose                | Color Name                   | Hex Code  | Usage Notes                      |
+| ---------------------- | ---------------------------- | --------- | -------------------------------- |
+| **Primary Brand**      | Hope Orange                  | `#F47A1F` | Logo, icons, highlights          |
+| **Primary Support**    | Deep Trust Navy              | `#0F2A44` | Navbar, footer, headings         |
+| **Urgency / Emotion**  | **Compassion Red (Red-600)** | `#DC2626` | Appeals, emergencies, highlights |
+| **Background**         | Soft Cloud White             | `#F9FAF7` | Main background                  |
+| **Section Background** | Warm Cream                   | `#FFF4E6` | NGO content sections             |
+| **Primary CTA**        | Action Orange                | `#E8590C` | Donate buttons                   |
+| **Secondary CTA**      | Calm Blue                    | `#1E4ED8` | Volunteer / Learn More           |
+| **Headings**           | Midnight Navy                | `#0B1F33` | Section titles                   |
+| **Body Text**          | Charcoal Gray                | `#374151` | Paragraph text                   |
+| **Borders / Lines**    | Light Ash Gray               | `#E5E7EB` | Dividers                         |
+| **Success / Impact**   | Hope Green                   | `#16A34A` | Achievements & stats             |
