@@ -22,6 +22,8 @@ import {
   FaLeaf,
   FaTelegramPlane,
   FaPinterestP,
+  FaUserShield,
+  FaPeopleCarry,
 } from "react-icons/fa";
 
 import logo from "../assets/images/logo-heh.png";
@@ -48,6 +50,9 @@ export default function Navbar() {
     { name: "Child Protection", path: "/what-we-do/child-protection", icon: <FaChild /> },
     { name: "Humanitarian", path: "/what-we-do/humanitarian", icon: <FaHandsHelping /> },
     { name: "Resilience", path: "/what-we-do/resilience", icon: <FaLeaf /> },
+    { name: "Dignity & Elder Care", path: "/what-we-do/elder-care", icon: <FaUserShield />},
+    { name: "Poverty Alleviation", path: "/what-we-do/poverty-alleviation",icon: <FaPeopleCarry />,
+  },
   ];
 
   useEffect(() => {

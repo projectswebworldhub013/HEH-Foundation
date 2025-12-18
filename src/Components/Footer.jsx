@@ -16,6 +16,8 @@ import {
   FaPinterestP,
   FaLinkedinIn,
   FaTelegramPlane,
+  FaPeopleCarry,
+  FaUserShield,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -54,6 +56,8 @@ const workAreas = [
   { name: "Child Protection", path: "/what-we-do/child-protection", icon: <FaChild /> },
   { name: "Humanitarian", path: "/what-we-do/humanitarian", icon: <FaHandsHelping /> },
   { name: "Resilience", path: "/what-we-do/resilience", icon: <FaLeaf /> },
+  { name: "Dignity & Elder Care", path: "/what-we-do/elder-care", icon: <FaUserShield />},
+  { name: "Poverty Alleviation", path: "/what-we-do/poverty-alleviation",icon: <FaPeopleCarry />,}
 ];
 
 export default function Footer() {

@@ -7,13 +7,15 @@ import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/pagination";
 
-// NGO Images (replace with real HEH assets)
+// NGO Images
 import education from "../assets/images/offer/o1.jpg";
 import health from "../assets/images/offer/o2.jpg";
 import economic from "../assets/images/offer/o3.jpg";
 import child from "../assets/images/offer/o4.jpg";
 import humanitarian from "../assets/images/offer/o5.jpg";
 import resilience from "../assets/images/offer/o6.avif";
+import elderly from "../assets/images/offer/o7.jpg";
+import poverty from "../assets/images/offer/o8.jpg";
 
 // COLOR SCHEME (HEH Foundation)
 const COLORS = {
@@ -50,22 +52,30 @@ const workAreas = [
     image: child,
   },
   {
-    title: "Humanitarian",
+    title: "Humanitarian Support",
     path: "/what-we-do/humanitarian",
     image: humanitarian,
   },
   {
-    title: "Resilience",
+    title: "Community Resilience",
     path: "/what-we-do/resilience",
     image: resilience,
+  },
+  {
+    title: "Dignity & Elder Care",
+    path: "/what-we-do/elder-care",
+    image: elderly,
+  },
+  {
+    title: "Ending Poverty",
+    path: "/what-we-do/poverty-alleviation",
+    image: poverty,
   },
 ];
 
 export default function WhatWeOffer() {
   return (
-    <section
-      className="py-24 bg-[#fffbf6]"
-    >
+    <section className="py-24 bg-[#fffbf6]">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-14 items-start">
 
         {/* LEFT CONTENT */}
@@ -89,10 +99,10 @@ export default function WhatWeOffer() {
             className="mt-6 text-base leading-relaxed"
             style={{ color: COLORS.body }}
           >
-            HEH Foundation works at the grassroots to uplift vulnerable
-            communities. Our initiatives focus on education, health,
-            protection, and long-term resilience — ensuring dignity,
-            opportunity, and hope for every individual we serve.
+            HEH Foundation works at the grassroots level to uplift vulnerable
+            communities. Our initiatives focus on education, health, dignity,
+            protection, and sustainable development — ensuring hope and
+            opportunity for every life we touch.
           </p>
 
           <Link
@@ -125,7 +135,8 @@ export default function WhatWeOffer() {
             {workAreas.map((area, index) => (
               <SwiperSlide key={index}>
                 <Link to={area.path}>
-                  <div className="relative h-[480px] rounded-2xl overflow-hidden shadow-xl group border"
+                  <div
+                    className="relative h-[480px] rounded-2xl overflow-hidden shadow-xl group border"
                     style={{ borderColor: COLORS.border }}
                   >
                     {/* IMAGE */}
@@ -135,10 +146,10 @@ export default function WhatWeOffer() {
                       className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-700"
                     />
 
-                    {/* DARK OVERLAY */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                    {/* OVERLAY */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/40 to-transparent"></div>
 
-                    {/* INDEX NUMBER */}
+                    {/* INDEX */}
                     <div
                       className="absolute top-6 left-6 text-6xl font-bold opacity-30"
                       style={{ color: COLORS.background }}

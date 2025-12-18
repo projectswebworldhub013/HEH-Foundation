@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom"
 import Home from "./Pages/Home"
 import Navbar from "./Components/Navbar"
 import Footer from "./Components/Footer"
+import SingleService from "./Pages/SingleService"
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>}/>
+        <Route path="/what-we-do/:slug" element={<SingleService />} />
       </Routes>
     <Footer/>
     </>
