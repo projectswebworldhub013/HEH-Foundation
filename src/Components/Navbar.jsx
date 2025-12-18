@@ -20,9 +20,12 @@ import {
   FaHandHoldingUsd,
   FaChild,
   FaLeaf,
+  FaTelegramPlane,
+  FaPinterestP,
 } from "react-icons/fa";
 
 import logo from "../assets/images/logo-heh.png";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -131,12 +134,29 @@ export default function Navbar() {
           </ul>
 
           {/* Desktop Social Icons */}
+          {/* 🔹 Updated Social Icons */}
           <div className="hidden md:flex gap-5 text-lg">
-            <a href="https://facebook.com" target="_blank" rel="noreferrer" className="text-[#1877F2] hover:scale-110 transition"><FaFacebookF /></a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-[#E1306C] hover:scale-110 transition"><FaInstagram /></a>
-            <a href="https://twitter.com" target="_blank" rel="noreferrer" className="text-[#1DA1F2] hover:scale-110 transition"><FaTwitter /></a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-[#0A66C2] hover:scale-110 transition"><FaLinkedinIn /></a>
-            <a href="https://youtube.com" target="_blank" rel="noreferrer" className="text-[#FF0000] hover:scale-110 transition"><FaYoutube /></a>
+            <a href="https://in.pinterest.com/hehfoundation/" target="_blank" rel="noreferrer" className="text-[#E60023] hover:scale-110 transition">
+              <FaPinterestP />
+            </a>
+            <a href="https://www.instagram.com/heh_foundation_official" target="_blank" rel="noreferrer" className="text-[#E1306C] hover:scale-110 transition">
+              <FaInstagram />
+            </a>
+            <a href="https://x.com/hehfoundation" target="_blank" rel="noreferrer" className="text-black hover:scale-110 transition">
+              <FaXTwitter />
+            </a>
+            <a href="https://www.youtube.com/@hehfoundation" target="_blank" rel="noreferrer" className="text-[#FF0000] hover:scale-110 transition">
+              <FaYoutube />
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61584475671866" target="_blank" rel="noreferrer" className="text-[#1877F2] hover:scale-110 transition">
+              <FaFacebookF />
+            </a>
+            <a href="https://www.linkedin.com/company/hunger-education-healthcare-foundation/" target="_blank" rel="noreferrer" className="text-[#0A66C2] hover:scale-110 transition">
+              <FaLinkedinIn />
+            </a>
+            <a href="https://t.me/hehfoundation" target="_blank" rel="noreferrer" className="text-[#229ED9] hover:scale-110 transition">
+              <FaTelegramPlane />
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
