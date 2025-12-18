@@ -16,7 +16,7 @@ import {
 } from "react-icons/md";
 
 // Background image
-// import bgImage from "../assets/images/hands2.jpg";
+import bgImage from "../assets/images/bg2.avif";
 
 const donors = [
   {
@@ -68,10 +68,10 @@ export default function OurDonors() {
   return (
     <section
       className="relative w-full py-24 px-6 md:px-12 lg:px-20 bg-cover bg-center"
-    //   style={{ backgroundImage: `url(${bgImage})` }}
+      style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[#fffbf6]"></div>
+      <div className="absolute inset-0 bg-[#fffbf61f]"></div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto">
