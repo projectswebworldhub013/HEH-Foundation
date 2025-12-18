@@ -82,7 +82,7 @@ export default function SingleService() {
 
       {/* TITLE */}
       <h1 className="max-w-4xl text-center md:text-left
-                     text-4xl md:text-5xl font-semibold
+                     text-3xl md:text-5xl font-semibold
                      text-white leading-tight">
         {service.title}
       </h1>
@@ -170,13 +170,11 @@ export default function SingleService() {
       </section>
 
       {/* ================= FUTURISTIC DIFFERENCE ================= */}
-      <section className="py-12 bg-[#F9FAF7] relative overflow-hidden">
+     <section className="py-12 bg-[#F9FAF7] relative overflow-hidden">
   <div className="max-w-7xl mx-auto px-6">
 
-    {/* Enhanced Section Header */}
+    {/* Section Header */}
     <div className="text-center mb-20 relative">
-      
-
       <p className="text-sm uppercase tracking-widest text-[#DC2626] font-semibold mb-3">
         Impact In Action
       </p>
@@ -194,17 +192,34 @@ export default function SingleService() {
     <div className="relative">
       <Swiper
         modules={[Autoplay]}
-  spaceBetween={30}
-  slidesPerView={4}
-  loop={true}
-  speed={2000}
-  autoplay={{
-    delay: 0,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true,
-  }}
-  grabCursor={true}
-  freeMode={true}
+        spaceBetween={30}
+        loop={true}
+        speed={3000}
+        autoplay={{
+          delay: 0,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
+        grabCursor={true}
+        freeMode={true}
+        breakpoints={{
+          0: {
+            slidesPerView: 1, // small screens
+            spaceBetween: 20,
+          },
+          640: {
+            slidesPerView: 2, // tablets
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3, // small laptops
+            spaceBetween: 25,
+          },
+          1280: {
+            slidesPerView: 4, // large screens
+            spaceBetween: 30,
+          },
+        }}
       >
         {service.quickPoints.map((point, index) => (
           <SwiperSlide key={index}>
@@ -255,6 +270,7 @@ export default function SingleService() {
     </div>
   </div>
 </section>
+
 
 
 
