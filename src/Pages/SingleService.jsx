@@ -330,15 +330,6 @@ export default function SingleService() {
     <span className="font-light"> & Build Confidence</span>
   </h2>
 
-  {/* Description */}
-  {/* <p className="mt-6 text-sm sm:text-base md:text-lg
-                text-[#374151] max-w-2xl mx-auto leading-relaxed">
-    We believe informed decisions create meaningful outcomes. Explore
-    thoughtfully curated answers that explain our approach, values, and
-    processes—so you move forward with absolute clarity, trust, and
-    confidence at every step.
-  </p> */}
-
   {/* Subtle divider */}
   <div className="mt-2 mx-auto w-24 h-[1px] bg-gradient-to-r
                   from-transparent via-[#DC2626]/40 to-transparent" />
@@ -372,13 +363,13 @@ export default function SingleService() {
             {/* Question */}
             <button
               onClick={() => setActiveFaq(isOpen ? null : index)}
-              className="w-full flex items-start sm:items-center justify-between
+              className="cursor-pointer w-full flex items-start sm:items-center justify-between
                          gap-4 px-5 sm:px-6 py-4 sm:py-5 text-left"
             >
               <div className="flex items-start gap-3">
                 {/* Smaller Icon */}
                 <div
-                  className={`mt-[2px] w-7 h-7 rounded-md
+                  className={`mt-[2px] w-7 h-7 rounded-full
                               flex items-center justify-center
                               bg-gradient-to-br from-[#F47A1F] to-[#DC2626]
                               text-white transition-transform duration-300
