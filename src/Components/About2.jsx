@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import aboutImage from "../assets/images/hero/h1.jpg";
-import valuesImage from "../assets/images/hero/h2.jpg";
+import aboutImage from "../assets/images/story1.jpg";
+import valuesImage from "../assets/images/story3.jpg";
 import bgImage from "../assets/images/bg3.avif";
 import { Link } from "react-router-dom";
 
