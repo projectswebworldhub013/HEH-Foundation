@@ -156,7 +156,7 @@ export default function SingleService() {
 
 
       {/* ================= LONG DESCRIPTION ================= */}
-      <section className="py-24 px-6 bg-[#FFF4E6]">
+      <section className="py-12 px-6 bg-[#FFF4E6]">
         <div className="max-w-6xl mx-auto grid md:grid-cols-[60px_1fr] gap-10">
           
           {/* vertical accent */}
