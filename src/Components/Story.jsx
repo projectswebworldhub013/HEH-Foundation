@@ -4,9 +4,9 @@ import valuesImage from "../assets/images/story3.jpg";
 import bgImage from "../assets/images/bg3.avif";
 import { Link } from "react-router-dom";
 
-export default function About2() {
+export default function Story() {
   return (
-    <section className="relative py-16 px-6 md:px-20 bg-[#F9FAF7]">
+    <section className="mt-24 relative py-16 px-6 md:px-20 bg-[#F9FAF7]">
       
       {/* Background */}
       <div className="absolute inset-0">

@@ -25,7 +25,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import bgImg from "../assets/images/bg.avif";
+import bgImg from "../assets/images/bg5.avif";
 import VisitorCounter from "./VisitorCounter";
 import Translator from "./Translator";
 
