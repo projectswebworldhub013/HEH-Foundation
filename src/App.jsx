@@ -15,6 +15,7 @@ import Story from "./Components/Story"
 import Vision from "./Pages/Vision"
 import Working from "./Pages/Working"
 import Supporters from "./Pages/Supporters"
+import ContactPage from "./Pages/ContactPage"
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
         <Route path="/vision-mission" element={<Vision/>}/>
         <Route path="/working" element={<Working/>}/>
         <Route path="/supporters" element={<Supporters/>}/>
+        <Route path="/contact" element={<ContactPage/>}/>
       </Routes>
     <Footer/>
     <FloatingButtons/>
