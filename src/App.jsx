@@ -16,6 +16,7 @@ import Vision from "./Pages/Vision"
 import Working from "./Pages/Working"
 import Supporters from "./Pages/Supporters"
 import ContactPage from "./Pages/ContactPage"
+import Team from "./Pages/Team"
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
         <Route path="/vision-mission" element={<Vision/>}/>
         <Route path="/working" element={<Working/>}/>
         <Route path="/supporters" element={<Supporters/>}/>
+        <Route path="/team" element={<Team/>}/>
         <Route path="/contact" element={<ContactPage/>}/>
       </Routes>
     <Footer/>

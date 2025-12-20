@@ -28,7 +28,7 @@ import {
   FaCogs,
   FaUsers,
 } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaUserGroup, FaXTwitter } from "react-icons/fa6";
 
 import logo from "../assets/images/logo-heh.png";
 
@@ -61,6 +61,7 @@ export default function Navbar() {
     { name: "Vision & Mission", path: "/vision-mission", icon: <FaBullseye /> },
     { name: "How We Work", path: "/working", icon: <FaCogs /> },
     { name: "Our Supporters", path: "/supporters", icon: <FaUsers /> },
+    { name: "Our Team", path: "/team", icon: <FaUserGroup /> },
   ];
 
   useEffect(() => {
