@@ -9,42 +9,77 @@ import {
 import { FaHandsHelping } from "react-icons/fa";
 
 /* Team Images */
-import team1 from "../assets/images/team/vaishnav.jpg";
-import team2 from "../assets/images/team/arshad.jpg";
-import team3 from "../assets/images/team/pooja.jpg";
-import team4 from "../assets/images/team/rahul.jpg";
+import vaishnav from "../assets/images/team/vaishnav.jpg";
+import arshad from "../assets/images/team/arshad.jpg";
+import pooja from "../assets/images/team/pooja.jpg";
+import murshil from "../assets/images/team/mursil.jpg";
+import advaith from "../assets/images/team/advaith.jpg";
+import sayana from "../assets/images/team/sayana.jpg";
+import nanda from "../assets/images/team/nanda.jpg";
+import salman from "../assets/images/team/salman.jpg";
 
 /* TEAM DATA */
 const team = [
   {
-    name: "Mr. Vaishnav Balaji Singh",
-    role: "Team Manager",
-    desc:
-      "Vaishnav plays a key role in coordinating initiatives and ensuring smooth execution of HEH Foundation’s programs, aligning on-ground efforts with the organization’s mission.",
-    img: team1,
+    name: "Ms. Pooja V",
+    role: "Founding Member",
+    quote:
+      "At HEH Foundation, our focus is on creating equal opportunity and lasting change. Every initiative is designed to empower individuals with dignity, confidence, and a stronger future.",
+    img: pooja,
   },
   {
     name: "Mr. Arshad R S",
     role: "Founding Member",
-    desc:
-      "As a founding member, Arshad brings vision, leadership, and deep commitment toward uplifting underserved communities through education, healthcare, and hunger relief.",
-    img: team2,
+    quote:
+      "HEH Foundation stands on the belief that dignity is a basic right. Our work is driven by compassion, responsibility, and a commitment to uplift communities through action.",
+    img: arshad,
   },
   {
-    name: "Ms. Pooja V",
-    role: "Founding Member",
-    desc:
-      "Pooja has been instrumental in shaping HEH Foundation’s values and outreach strategies, focusing on compassion-driven action and sustainable social impact.",
-    img: team3,
+    name: "Mr. Salman",
+    role: "Managing Director",
+    quote:
+      "Leadership is about responsibility and impact. At HEH Foundation, we ensure every decision is purposeful, transparent, and aligned with creating meaningful social outcomes.",
+    img: salman,
   },
   {
-    name: "Mr. Rahul Sharma",
-    role: "Community Outreach Coordinator",
-    desc:
-      "Rahul works closely with volunteers and local communities to ensure HEH Foundation’s initiatives reach those who need them the most, with dignity and respect.",
-    img: team4,
+    name: "Mr. Vaishnav Balaji Singh",
+    role: "Team Manager",
+    quote:
+      "Strong coordination and clear execution are essential for impact. My role is to ensure our initiatives run efficiently while staying true to the foundation’s mission.",
+    img: vaishnav,
+  },
+  {
+    name: "Sayana Unnikrishnan",
+    role: "Team Leader",
+    quote:
+      "Effective leadership begins with collaboration. I believe meaningful change happens when teams work with empathy, clarity, and a shared sense of purpose.",
+    img: sayana,
+  },
+  {
+    name: "Mursil Zaman",
+    role: "Fundraising Executive",
+    quote:
+      "Fundraising is about building trust and shared vision. Connecting supporters to our mission helps transform generosity into sustainable social impact.",
+    img: murshil,
+  },
+  {
+    name: "Advaith P",
+    role: "Fundraising Executive",
+    quote:
+      "Every contribution matters. My focus is to connect meaningful causes with committed supporters, ensuring transparency and long-term value.",
+    img: advaith,
+  },
+  {
+    name: "Nanda Kishor",
+    role: "Fundraising Executive",
+    quote:
+      "Sustainable change grows through collective support. By clearly sharing our vision, we strengthen partnerships that help expand our impact.",
+    img: nanda,
   },
 ];
+
+
+
 
 /* SOCIAL ICONS */
 const socials = [
@@ -54,7 +89,7 @@ const socials = [
   { icon: BsTwitterX, link: "https://x.com" },
 ];
 
-export default function Team() {
+export default function OurTeam() {
   return (
     <section className="mt-24 w-full bg-[#fffaf3d8] py-20">
       <div className="max-w-7xl mx-auto px-6">
@@ -100,7 +135,7 @@ export default function Team() {
               <div className="flex flex-col md:flex-row gap-6 p-6 pt-16 md:pt-6">
 
                 {/* 🟠 DESKTOP IMAGE */}
-                <div className="hidden md:block shrink-0 w-[120px]">
+                <div className="hidden md:block shrink-0 w-[170px]">
                   <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-[#F9FAF7]">
                     <FaHandsHelping className="absolute top-2 left-2 text-[#F47A1F]/20 text-3xl" />
                     <img
@@ -122,7 +157,7 @@ export default function Team() {
                   </p>
 
                   <p className="text-sm text-[#374151] leading-relaxed mb-5">
-                    {member.desc}
+                    "{member.quote}"
                   </p>
 
                   {/* SOCIAL ICONS */}
