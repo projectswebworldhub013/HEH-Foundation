@@ -73,6 +73,12 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+useEffect(() => {
+  if (!menuOpen) {
+    setWorkOpen(false);
+    setWhoOpen(false);
+  }
+}, [menuOpen]);
 
   return (
     <header className="fixed top-0 left-0 w-full z-50">
@@ -165,53 +171,130 @@ export default function Navbar() {
       </nav>
 
       {/* 🔹 Mobile Menu */}
-      <div className={`fixed top-0 left-0 h-full w-72 bg-white shadow-xl z-50 transition-transform duration-500 ${menuOpen ? "translate-x-0" : "-translate-x-full"}`}>
-        <div className="flex justify-between p-4 border-b">
-          <h2 className="font-bold text-[#0F2A44]">HEH Foundation</h2>
-          <FaTimes onClick={() => setMenuOpen(false)} />
-        </div>
+      <div
+  className={`fixed top-0 left-0 h-full w-80 bg-white z-50 shadow-2xl transform transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]
+  ${menuOpen ? "translate-x-0" : "-translate-x-full"}`}
+>
+  {/* Header */}
+  <div className="flex items-center justify-between px-5 py-4 border-b border-gray-200">
+    <h2 className="font-bold text-lg text-[#0F2A44] tracking-wide">
+      HEH Foundation
+    </h2>
+    <button
+      onClick={() => setMenuOpen(false)}
+      className="p-2 rounded-full hover:bg-gray-100 transition"
+    >
+      <FaTimes size={18} />
+    </button>
+  </div>
 
-        <div className="p-4 space-y-3">
-          {navLinks.map((link, i) => (
-            <Link key={i} to={link.path} onClick={() => setMenuOpen(false)} className="flex gap-3 py-2 border-b">
-              {link.icon} {link.name}
+  {/* Content */}
+  <div className="h-full overflow-y-auto px-5 py-4 space-y-4">
+    {/* Primary Links */}
+    {navLinks.map((link, i) => (
+      <Link
+        key={i}
+        to={link.path}
+        onClick={() => setMenuOpen(false)}
+        className="flex items-center gap-3 py-3 text-[15px] font-medium text-[#0F2A44]
+                   hover:text-[#F47A1F] transition relative"
+      >
+        <span className="text-[#F47A1F]">{link.icon}</span>
+        {link.name}
+        <span className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+      </Link>
+    ))}
+
+    {/* WHAT WE DO */}
+    <div className="pt-2">
+      <button
+        onClick={() => setWorkOpen(!workOpen)}
+        className="w-full flex items-center justify-between py-3 text-[15px] font-semibold text-[#0F2A44]"
+      >
+        <span className="flex items-center gap-3">
+          <FaHandsHelping className="text-[#F47A1F]" />
+          What We Do
+        </span>
+        <FaChevronDown
+          className={`transition-transform duration-300 ${
+            workOpen ? "rotate-180" : ""
+          }`}
+        />
+      </button>
+
+      <div
+        className={`overflow-hidden transition-all duration-500 ease-in-out
+        ${workOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"}`}
+      >
+        <div className="pl-6 pt-2 space-y-2">
+          {workAreas.map((item, i) => (
+            <Link
+              key={i}
+              to={item.path}
+              onClick={() => setMenuOpen(false)}
+              className="flex items-center gap-3 py-2 text-sm text-gray-700 hover:text-[#F47A1F] transition"
+            >
+              <span className="text-[#F47A1F]">{item.icon}</span>
+              {item.name}
             </Link>
           ))}
-
-          {/* Mobile What We Do */}
-          <button onClick={() => setWorkOpen(!workOpen)} className="flex justify-between w-full py-3 border-b">
-            <span className="flex gap-2 items-center"><FaHandsHelping /> What We Do</span>
-            {workOpen ? <FaChevronUp /> : <FaChevronDown />}
-          </button>
-          {workOpen && workAreas.map((item, i) => (
-            <Link key={i} to={item.path} onClick={() => setMenuOpen(false)} className="flex gap-3 py-2 pl-6 text-sm">
-              {item.icon} {item.name}
-            </Link>
-          ))}
-
-          {/* Mobile Who We Are */}
-          <button onClick={() => setWhoOpen(!whoOpen)} className="flex justify-between w-full py-3 border-b">
-            <span className="flex gap-2 items-center"><FaUsers /> Who We Are</span>
-            {whoOpen ? <FaChevronUp /> : <FaChevronDown />}
-          </button>
-          {whoOpen && whoWeAreLinks.map((item, i) => (
-            <Link key={i} to={item.path} onClick={() => setMenuOpen(false)} className="flex gap-3 py-2 pl-6 text-sm">
-              {item.icon} {item.name}
-            </Link>
-          ))}
-
-          {/* Mobile Social Icons */}
-          <div className="pt-6 border-t flex flex-wrap gap-4 text-lg">
-            <a href="https://in.pinterest.com/hehfoundation/" target="_blank" rel="noreferrer"><FaPinterestP className="text-[#E60023]" /></a>
-            <a href="https://www.instagram.com/heh_foundation_official" target="_blank" rel="noreferrer"><FaInstagram className="text-[#E1306C]" /></a>
-            <a href="https://x.com/hehfoundation" target="_blank" rel="noreferrer"><FaXTwitter /></a>
-            <a href="https://www.youtube.com/@hehfoundation" target="_blank" rel="noreferrer"><FaYoutube className="text-[#FF0000]" /></a>
-            <a href="https://www.facebook.com/profile.php?id=61584475671866" target="_blank" rel="noreferrer"><FaFacebookF className="text-[#1877F2]" /></a>
-            <a href="https://www.linkedin.com/company/hunger-education-healthcare-foundation/" target="_blank" rel="noreferrer"><FaLinkedinIn className="text-[#0A66C2]" /></a>
-            <a href="https://t.me/hehfoundation" target="_blank" rel="noreferrer"><FaTelegramPlane className="text-[#229ED9]" /></a>
-          </div>
         </div>
       </div>
+    </div>
+
+    {/* WHO WE ARE */}
+    <div className="pt-2">
+      <button
+        onClick={() => setWhoOpen(!whoOpen)}
+        className="w-full flex items-center justify-between py-3 text-[15px] font-semibold text-[#0F2A44]"
+      >
+        <span className="flex items-center gap-3">
+          <FaUsers className="text-[#F47A1F]" />
+          Who We Are
+        </span>
+        <FaChevronDown
+          className={`transition-transform duration-300 ${
+            whoOpen ? "rotate-180" : ""
+          }`}
+        />
+      </button>
+
+      <div
+        className={`overflow-hidden transition-all duration-500 ease-in-out
+        ${whoOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}
+      >
+        <div className="pl-6 pt-2 space-y-2">
+          {whoWeAreLinks.map((item, i) => (
+            <Link
+              key={i}
+              to={item.path}
+              onClick={() => setMenuOpen(false)}
+              className="flex items-center gap-3 py-2 text-sm text-gray-700 hover:text-[#F47A1F] transition"
+            >
+              <span className="text-[#F47A1F]">{item.icon}</span>
+              {item.name}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    {/* Divider */}
+    <div className="my-6 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
+
+    {/* Social Icons */}
+    <div className="flex flex-wrap gap-4 text-lg justify-center pb-10">
+      <FaPinterestP className="text-[#E60023] hover:scale-110 transition" />
+      <FaInstagram className="text-[#E1306C] hover:scale-110 transition" />
+      <FaXTwitter className="hover:scale-110 transition" />
+      <FaYoutube className="text-[#FF0000] hover:scale-110 transition" />
+      <FaFacebookF className="text-[#1877F2] hover:scale-110 transition" />
+      <FaLinkedinIn className="text-[#0A66C2] hover:scale-110 transition" />
+      <FaTelegramPlane className="text-[#229ED9] hover:scale-110 transition" />
+    </div>
+  </div>
+</div>
+
 
       {/* Marquee Animation */}
       <style>{`
