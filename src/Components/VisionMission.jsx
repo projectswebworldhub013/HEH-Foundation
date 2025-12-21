@@ -64,7 +64,7 @@ const VisionMission = () => {
 
       {/* ===================== MOBILE / SMALL SCREENS ===================== */}
       <section
-        className="relative flex md:hidden min-h-screen w-full items-center
+        className="relative flex md:hidden min-h-[70vh] w-full items-center
                    bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${visionBgMobile})`,
