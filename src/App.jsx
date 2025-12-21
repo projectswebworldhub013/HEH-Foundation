@@ -17,6 +17,7 @@ import Working from "./Pages/Working"
 import Supporters from "./Pages/Supporters"
 import ContactPage from "./Pages/ContactPage"
 import Team from "./Pages/Team"
+import Gallery from "./Pages/Gallery"
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
         <Route path="/supporters" element={<Supporters/>}/>
         <Route path="/team" element={<Team/>}/>
         <Route path="/contact" element={<ContactPage/>}/>
+        <Route path="/gallery" element={<Gallery/>}/>
       </Routes>
     <Footer/>
     <FloatingButtons/>
