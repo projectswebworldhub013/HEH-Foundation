@@ -44,7 +44,7 @@ const quickLinks = [
   { name: "Who We Are", path: "/who-we-are", icon: <FaInfoCircle /> },
   { name: "Gallery", path: "/gallery", icon: <FaImages /> },
   { name: "Contact Us", path: "/contact", icon: <FaPhoneAlt /> },
-  { name: "Certificates", path: "/certificates", icon: <FaInfoCircle /> },
+  // { name: "Certificates", path: "/certificates", icon: <FaInfoCircle /> },
   { name: "Cancellation & Refund Policy", path: "/cancellation-refund", icon: <FaInfoCircle /> },
   { name: "Privacy Policy", path: "/privacy-policy", icon: <FaInfoCircle /> },
   { name: "Shipping & Delivery Policy", path: "/shipping-delivery", icon: <FaInfoCircle /> },
