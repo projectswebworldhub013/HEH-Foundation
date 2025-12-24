@@ -60,20 +60,34 @@ const AboutSection = () => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                to="/about"
-                className="px-8 py-4 rounded-full bg-[#E8590C] hover:bg-[#DC2626] text-white font-semibold shadow-lg transition"
-              >
-                Know More
-              </Link>
-              <Link
-                to="/contact"
-                className="px-8 py-4 rounded-full bg-[#1E4ED8] hover:bg-[#0F2A44] text-white font-semibold shadow-lg transition"
-              >
-                Get in Touch
-              </Link>
-            </div>
+           <div className="mt-8 flex gap-3 md:gap-4">
+  <Link
+    to="/about"
+    className="
+      px-5 py-3 text-sm
+      sm:px-6 sm:py-3 sm:text-base
+      md:px-8 md:py-4 md:text-base
+      rounded-full bg-[#E8590C] hover:bg-[#DC2626]
+      text-white font-semibold shadow-lg transition
+    "
+  >
+    Know More
+  </Link>
+
+  <Link
+    to="/contact"
+    className="
+      px-5 py-3 text-sm
+      sm:px-6 sm:py-3 sm:text-base
+      md:px-8 md:py-4 md:text-base
+      rounded-full bg-[#1E4ED8] hover:bg-[#0F2A44]
+      text-white font-semibold shadow-lg transition
+    "
+  >
+    Get in Touch
+  </Link>
+</div>
+
           </div>
 
           {/* RIGHT SECTION */}

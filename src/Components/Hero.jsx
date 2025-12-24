@@ -140,7 +140,7 @@ export default function Hero() {
       </div>
 
       {/* Impact Cards */}
-      <div className="absolute bottom-16 w-full hidden md:flex justify-center gap-6 px-6 z-20">
+      <div className="absolute bottom-12 w-full hidden md:flex justify-center gap-6 px-6 z-20">
         {impactCards.map((card, i) => (
           <div
             key={i}

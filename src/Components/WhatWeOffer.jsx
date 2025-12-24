@@ -106,7 +106,7 @@ export default function WhatWeOffer() {
           </p>
 
           <Link
-            to="/what-we-do"
+            to="/gallery"
             className="inline-block mt-8 px-8 py-3 rounded-full text-white text-sm font-semibold shadow-lg hover:scale-105 transition-all"
             style={{ backgroundColor: COLORS.brand }}
           >
