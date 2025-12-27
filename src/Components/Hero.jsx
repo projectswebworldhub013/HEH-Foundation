@@ -80,12 +80,12 @@ export default function Hero() {
 
 
       {/* Social Icons */}
-      <div className="absolute left-6 top-1/2 -translate-y-1/2 hidden md:flex flex-col gap-5 text-white z-50">
+      {/* <div className="absolute left-6 top-1/2 -translate-y-1/2 hidden md:flex flex-col gap-5 text-white z-50">
         <FaFacebookF className="hover:text-[#F47A1F] text-xl cursor-pointer transition" />
         <FaTwitter className="hover:text-[#F47A1F] text-xl cursor-pointer transition" />
         <FaInstagram className="hover:text-[#F47A1F] text-xl cursor-pointer transition" />
         <FaYoutube className="hover:text-[#DC2626] text-xl cursor-pointer transition" />
-      </div>
+      </div> */}
 
       {/* Hero Content */}
       <div className="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">

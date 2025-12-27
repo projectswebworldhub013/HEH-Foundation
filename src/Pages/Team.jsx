@@ -17,6 +17,7 @@ import advaith from "../assets/images/team/advaith.jpg";
 import sayana from "../assets/images/team/sayana.jpg";
 import nanda from "../assets/images/team/nanda.jpg";
 import salman from "../assets/images/team/salman.jpg";
+import rudhin from "../assets/images/team/rudhin.jpeg";
 
 /* TEAM DATA */
 const team = [
@@ -41,6 +42,13 @@ const team = [
       "Leadership is about responsibility and impact. At HEH Foundation, we ensure every decision is purposeful, transparent, and aligned with creating meaningful social outcomes.",
     img: salman,
   },
+  {
+  name: "Mr. Rudhin Raj",
+  role: "Executive Director",
+  quote:
+    "As Executive Director of HEH Foundation, my commitment is to lead with integrity, empower communities, and transform vision into measurable social impact.",
+  img: rudhin,
+},
   {
     name: "Mr. Vaishnav Balaji Singh",
     role: "Team Manager",

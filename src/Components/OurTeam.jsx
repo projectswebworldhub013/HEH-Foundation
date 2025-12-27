@@ -17,9 +17,10 @@ import advaith from "../assets/images/team/advaith.jpg";
 import sayana from "../assets/images/team/sayana.jpg";
 import nanda from "../assets/images/team/nanda.jpg";
 import salman from "../assets/images/team/salman.jpg";
-
+import rudhin from "../assets/images/team/rudhin.jpeg";
 /* TEAM DATA */
 const team = [
+  
   {
     name: "Ms. Pooja V",
     role: "Founding Member",
@@ -35,14 +36,21 @@ const team = [
     img: arshad,
   },
   {
-    name: "Mr. Salman",
+    name: "Salman Ul Arif",
     role: "Managing Director",
     quote:
       "Every decision we take is guided by purpose, transparency, and measurable social impact.",
     img: salman,
   },
   {
-    name: "Mr. Vaishnav Balaji Singh",
+  name: "Mr. Rudhin Raj",
+  role: "Executive Director",
+  quote:
+    "As Executive Director of HEH Foundation, my commitment is to lead with integrity, empower communities, and transform vision into measurable social impact.",
+  img: rudhin,
+},
+  {
+    name: "Vaishnav Singh",
     role: "Team Manager",
     quote:
       "Clear coordination and disciplined execution help translate vision into meaningful action.",
