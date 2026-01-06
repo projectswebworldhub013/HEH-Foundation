@@ -69,14 +69,14 @@ const AboutHero = () => {
 
     {/* Our Memories */}
     <Link
-      to="/memories"
+      to="/gallery"
       className="group inline-flex items-center gap-2 px-6 py-3 rounded-full
                  border border-[#E5E7EB] text-[#F9FAF7] text-sm font-medium
                  backdrop-blur-sm bg-white/5
                  hover:bg-white/10 hover:border-white
                  transition-all duration-300"
     >
-      Our Memories
+      Our Work
       <FaRegImages className="text-sm opacity-90" />
     </Link>
   </div>

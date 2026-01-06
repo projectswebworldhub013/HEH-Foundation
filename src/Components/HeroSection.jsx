@@ -10,9 +10,9 @@ import hero2 from "../assets/images/gallery/g1.jpg"; // Healthcare
 import hero3 from "../assets/images/gallery/g3.jpg"; // Hunger Relief
 import hero4 from "../assets/images/gallery/g4.jpg"; // Community Support
 import hero5 from "../assets/images/gallery/g5.jpg"; // Volunteer Work
-
 // Background
 import bgHero from "../assets/images/bg.avif";
+import DonateQRModal from "./DonateQrModal";
 
 const SLIDES = [
   {
@@ -51,6 +51,7 @@ export default function HeroSection() {
   const [active, setActive] = useState(0);
   const [fade, setFade] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
+  const [showQR, setShowQR] = useState(false); 
 
   // 🔁 AUTO SLIDE
   useEffect(() => {
@@ -108,21 +109,23 @@ export default function HeroSection() {
 
           {/* CTA */}
           <div className="flex flex-wrap gap-4 mt-8">
-            <Link to="/donate">
-              <button className="bg-[#E8590C] hover:bg-[#DC2626] text-white font-semibold px-7 py-3 rounded-lg shadow-lg transition">
-                Donate Now
-              </button>
-            </Link>
+            <button
+  onClick={() => setShowQR(true)}
+  className="cursor-pointer px-7 py-3 rounded-full bg-[#E8590C] hover:bg-[#DC2626] text-white font-semibold shadow-lg transition"
+>
+  Donate Now
+</button>
 
-            <Link to="/volunteer">
-              <button className="border-2 border-[#1E4ED8] text-[#1E4ED8] hover:bg-[#1E4ED8] hover:text-white px-7 py-3 rounded-lg font-semibold transition">
+
+            <Link to="/contact">
+              <button className="cursor-pointer border-2 border-[#1E4ED8] text-[#1E4ED8] hover:bg-[#1E4ED8] hover:text-white px-7 py-3 rounded-lg font-semibold transition">
                 Become a Volunteer
               </button>
             </Link>
 
             <button
               onClick={() => setShowVideo(true)}
-              className="flex items-center gap-2 text-[#0F2A44] font-medium hover:underline"
+              className="cursor-pointer flex items-center gap-2 text-[#0F2A44] font-medium hover:underline"
             >
               <Play size={18} /> Watch Our Story
             </button>
@@ -230,6 +233,11 @@ export default function HeroSection() {
           </motion.div>
         )}
       </AnimatePresence>
+      <DonateQRModal
+  isOpen={showQR}
+  onClose={() => setShowQR(false)}
+/>
+
     </section>
   );
 }

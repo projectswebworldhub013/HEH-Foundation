@@ -23,11 +23,12 @@ import hero1 from "../assets/images/hero/h3.jpg";
 import hero2 from "../assets/images/hero/h2.jpg";
 import hero3 from "../assets/images/hero/h1.jpg";
 import hero4 from "../assets/images/gallery/g1.jpg";
+import DonateQRModal from "./DonateQrModal";
 
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [hero1, hero2, hero3, hero4];
-
+  const [showQR, setShowQR] = useState(false);
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -77,15 +78,7 @@ export default function Hero() {
 
   <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/30" />
 </div>
-
-
-      {/* Social Icons */}
-      {/* <div className="absolute left-6 top-1/2 -translate-y-1/2 hidden md:flex flex-col gap-5 text-white z-50">
-        <FaFacebookF className="hover:text-[#F47A1F] text-xl cursor-pointer transition" />
-        <FaTwitter className="hover:text-[#F47A1F] text-xl cursor-pointer transition" />
-        <FaInstagram className="hover:text-[#F47A1F] text-xl cursor-pointer transition" />
-        <FaYoutube className="hover:text-[#DC2626] text-xl cursor-pointer transition" />
-      </div> */}
+    
 
       {/* Hero Content */}
       <div className="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
@@ -119,14 +112,15 @@ export default function Hero() {
 
         {/* CTA Buttons */}
         <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <button
+  onClick={() => setShowQR(true)}
+  className="cursor-pointer px-7 py-3 rounded-full bg-[#E8590C] hover:bg-[#DC2626] text-white font-semibold shadow-lg transition"
+>
+  Donate Now
+</button>
+
           <Link
-            to="/donate"
-            className="px-7 py-3 rounded-full bg-[#E8590C] hover:bg-[#DC2626] text-white font-semibold shadow-lg transition"
-          >
-            Donate Now
-          </Link>
-          <Link
-            to="/volunteer"
+            to="/contact"
             className="px-7 py-3 rounded-full bg-[#1E4ED8] hover:bg-[#0F2A44] text-white font-semibold shadow-lg transition"
           >
             Become a Volunteer
@@ -181,6 +175,11 @@ export default function Hero() {
           ))}
         </Swiper>
       </div>
+      <DonateQRModal
+  isOpen={showQR}
+  onClose={() => setShowQR(false)}
+/>
+
     </section>
   );
 }
