@@ -27,6 +27,7 @@ import {
   FaBullseye,
   FaCogs,
   FaUsers,
+  FaFileAlt,
 } from "react-icons/fa";
 import { FaUserGroup, FaXTwitter } from "react-icons/fa6";
 
@@ -62,6 +63,7 @@ export default function Navbar() {
     { name: "How We Work", path: "/working", icon: <FaCogs /> },
     { name: "Our Supporters", path: "/supporters", icon: <FaUsers /> },
     { name: "Our Team", path: "/team", icon: <FaUserGroup /> },
+    { name: "Our Certificates", path: "/certificates", icon: <FaFileAlt /> },
   ];
 
   useEffect(() => {

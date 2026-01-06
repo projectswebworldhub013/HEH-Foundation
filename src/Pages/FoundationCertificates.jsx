@@ -209,7 +209,7 @@ export default function FoundationCertificates() {
         <div
           className="absolute inset-0
                      bg-gradient-to-br
-                     from-black/35 via-black/45 to-black/90
+                     from-black/35 via-black/65 to-black/90
                      "
         />
 
