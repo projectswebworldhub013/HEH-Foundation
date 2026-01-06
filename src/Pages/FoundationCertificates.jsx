@@ -18,11 +18,11 @@ import trustDeedPdf from "/trust-deed.pdf"; // from public
 import panPdf from "../assets/certificates/pan.pdf";
 
 /* ===================== IMAGE IMPORTS ===================== */
-import tanImg from "../assets/images/bg4.jpg";
-import udyamImg from "../assets/images/bg4.jpg";
-import annexureImg from "../assets/images/bg4.jpg";
-import trustImg from "../assets/images/bg4.jpg";
-import panImg from "../assets/images/bg4.jpg";
+import tanImg from "../assets/images/pdf-one.jpg";
+import udyamImg from "../assets/images/msme.jpg";
+import annexureImg from "../assets/images/udyam.jpg";
+import trustImg from "../assets/images/legal.jpg";
+import panImg from "../assets/images/pan.jpg";
 
 /* ===================== DATA ===================== */
 const certificates = [
