@@ -42,6 +42,13 @@ const team = [
       "Every decision we take is guided by purpose, transparency, and measurable social impact.",
     img: salman,
   },
+   {
+    name: "Vaishnav Singh",
+    role: "Team Manager",
+    quote:
+      "Clear coordination and disciplined execution help translate vision into meaningful action.",
+    img: vaishnav,
+  },
   {
   name: "Mr. Rudhin Raj",
   role: "Executive Director",
@@ -49,13 +56,6 @@ const team = [
     "As Executive Director of HEH Foundation, my commitment is to lead with integrity, empower communities, and transform vision into measurable social impact.",
   img: rudhin,
 },
-  {
-    name: "Vaishnav Singh",
-    role: "Team Manager",
-    quote:
-      "Clear coordination and disciplined execution help translate vision into meaningful action.",
-    img: vaishnav,
-  },
   {
     name: "Sayana Unnikrishnan",
     role: "Team Leader",
@@ -97,7 +97,7 @@ const socials = [
 export default function OurTeam() {
   const [showAll, setShowAll] = useState(false);
 
-  const visibleTeam = showAll ? team : team.slice(0, 4);
+  const visibleTeam = showAll ? team : team.slice(0, 6);
 
   return (
     <section className="w-full bg-[#fffaf3d8] py-20">

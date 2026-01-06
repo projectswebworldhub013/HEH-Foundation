@@ -57,7 +57,7 @@ const ContactHero = () => {
         {/* CTA Buttons */}
         <div className="flex flex-wrap gap-5 mb-6 justify-center">
           <a
-            href="tel:+917356038727"
+            href="tel:+917012502008"
             className="flex items-center gap-2 px-7 py-3 font-semibold rounded-xl
                        bg-[#E8590C] text-white shadow-lg
                        transition-all duration-500 hover:scale-105 hover:shadow-2xl"

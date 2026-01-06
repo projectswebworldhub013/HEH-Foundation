@@ -10,23 +10,22 @@ import {
 
 export default function BankDetails() {
   return (
-    <section className="w-full bg-[#F9FAF7] py-16 px-6 md:px-12">
-      <div className="max-w-3xl mx-auto bg-white rounded-3xl shadow-xl border border-[#E5E7EB] overflow-hidden">
-        
+    <section className="w-full bg-[#F9FAF7] pb-10 px-4 md:px-8">
+      <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg border border-[#E5E7EB]">
+
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#E8590C] to-[#DC2626] px-8 py-6">
-          <h2 className="text-white text-2xl font-bold text-center">
+        <div className="bg-gradient-to-r from-[#E8590C] to-[#DC2626] px-6 py-4">
+          <h2 className="text-white text-xl font-bold text-center">
             Bank Account Details
           </h2>
-          <p className="text-white/90 text-center text-sm mt-1">
-            Please find our official banking details below
+          <p className="text-white/90 text-center text-xs mt-1">
+            Official HEH Foundation Banking Information
           </p>
         </div>
 
         {/* Body */}
-        <div className="p-8 space-y-6">
+        <div className="px-6 py-5 space-y-4">
 
-          {/* Entity Name */}
           <DetailRow
             icon={<FaUserShield />}
             label="Entity Name"
@@ -36,7 +35,6 @@ export default function BankDetails() {
 
           <Divider />
 
-          {/* Account Number */}
           <DetailRow
             icon={<FaHashtag />}
             label="Account Number"
@@ -46,7 +44,6 @@ export default function BankDetails() {
 
           <Divider />
 
-          {/* IFSC */}
           <DetailRow
             icon={<FaUniversity />}
             label="IFSC Code"
@@ -56,7 +53,6 @@ export default function BankDetails() {
 
           <Divider />
 
-          {/* Branch */}
           <DetailRow
             icon={<FaCodeBranch />}
             label="Branch Name"
@@ -65,7 +61,6 @@ export default function BankDetails() {
 
           <Divider />
 
-          {/* Location */}
           <DetailRow
             icon={<FaMapMarkerAlt />}
             label="Bank Location"
@@ -74,28 +69,33 @@ export default function BankDetails() {
         </div>
 
         {/* Footer */}
-        <div className="bg-[#F9FAF7] px-8 py-6 border-t border-[#E5E7EB] text-center">
-          <p className="text-sm text-[#374151] font-medium">
-            For any banking-related assistance
-          </p>
+        <div className="bg-[#F9FAF7] px-6 py-4 border-t border-[#E5E7EB]">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-left">
 
-          <p className="mt-2 text-[#0B1F33] font-semibold">
-            Sharat Naik
-          </p>
+            <div>
+              <p className="text-xs text-[#6B7280]">
+                Banking Assistance
+              </p>
+              <p className="font-semibold text-[#0B1F33] text-sm">
+                Sharat Naik
+              </p>
+              <p className="text-xs text-[#6B7280]">
+                TASC Relationship Manager
+              </p>
+            </div>
 
-          <p className="text-sm text-[#374151]">
-            TASC Relationship Manager
-          </p>
+            <div className="flex items-center gap-2 text-[#16A34A] font-semibold text-sm">
+              <FaPhoneAlt />
+              <span>+91 88611 01926</span>
+            </div>
 
-          <div className="flex items-center justify-center gap-2 mt-3 text-[#16A34A] font-semibold">
-            <FaPhoneAlt />
-            <span>+91 88611 01926</span>
           </div>
         </div>
       </div>
     </section>
   );
 }
+
 
 /* -------------------------------- */
 /* Reusable Sub Components           */

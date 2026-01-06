@@ -115,48 +115,54 @@ const ContactPage = () => {
               </h3>
 
               <form
-                action="mailto:info@hehfoundation.org"
-                method="POST"
-                encType="text/plain"
-                className="space-y-6"
-              >
-                <input
-                  type="text"
-                  name="Name"
-                  required
-                  placeholder="Your Name"
-                  className="w-full border border-[#E5E7EB] rounded-lg px-5 py-3 text-base focus:outline-none focus:border-[#F47A1F]"
-                />
+  action="https://formsubmit.co/info@hehfoundation.org"
+  method="POST"
+  className="space-y-6"
+>
+  {/* FormSubmit hidden configs */}
+  <input type="hidden" name="_subject" value="New Contact Message - HEH Foundation" />
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_template" value="table" />
+  <input type="hidden" name="_replyto" value="%Email%" />
 
-                <input
-                  type="email"
-                  name="Email"
-                  required
-                  placeholder="Your Email Address"
-                  className="w-full border border-[#E5E7EB] rounded-lg px-5 py-3 text-base focus:outline-none focus:border-[#F47A1F]"
-                />
+  <input
+    type="text"
+    name="Name"
+    required
+    placeholder="Your Name"
+    className="w-full border border-[#E5E7EB] rounded-lg px-5 py-3 text-base focus:outline-none focus:border-[#F47A1F]"
+  />
 
-                <textarea
-                  name="Message"
-                  rows="5"
-                  required
-                  placeholder="Write your message here..."
-                  className="w-full border border-[#E5E7EB] rounded-lg px-5 py-3 text-base focus:outline-none focus:border-[#F47A1F]"
-                />
+  <input
+    type="email"
+    name="Email"
+    required
+    placeholder="Your Email Address"
+    className="w-full border border-[#E5E7EB] rounded-lg px-5 py-3 text-base focus:outline-none focus:border-[#F47A1F]"
+  />
 
-                <p className="text-xs text-[#6B7280] leading-relaxed">
-                  By submitting this form, you consent to the collection and
-                  processing of your personal information in accordance with
-                  our Privacy Policy.
-                </p>
+  <textarea
+    name="Message"
+    rows="5"
+    required
+    placeholder="Write your message here..."
+    className="w-full border border-[#E5E7EB] rounded-lg px-5 py-3 text-base focus:outline-none focus:border-[#F47A1F]"
+  />
 
-                <button
-                  type="submit"
-                  className="bg-gradient-to-r from-[#F47A1F] to-[#DC2626] text-white px-8 py-3 rounded-full text-base font-medium hover:opacity-90 transition"
-                >
-                  Submit Message
-                </button>
-              </form>
+  <p className="text-xs text-[#6B7280] leading-relaxed">
+    By submitting this form, you consent to the collection and
+    processing of your personal information in accordance with
+    our Privacy Policy.
+  </p>
+
+  <button
+    type="submit"
+    className="bg-gradient-to-r from-[#F47A1F] to-[#DC2626] text-white px-8 py-3 rounded-full text-base font-medium hover:opacity-90 transition"
+  >
+    Submit Message
+  </button>
+</form>
+
             </div>
           </div>
 
