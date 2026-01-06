@@ -141,6 +141,15 @@ const ContactPage = () => {
     className="w-full border border-[#E5E7EB] rounded-lg px-5 py-3 text-base focus:outline-none focus:border-[#F47A1F]"
   />
 
+   <input
+  type="tel"
+  name="Contact Number"
+  required
+  placeholder="Your Contact Number"
+  className="w-full border border-[#E5E7EB] rounded-lg px-5 py-3 text-base focus:outline-none focus:border-[#F47A1F]"
+/>
+
+
   <textarea
     name="Message"
     rows="5"
