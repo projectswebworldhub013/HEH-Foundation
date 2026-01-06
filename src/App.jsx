@@ -18,6 +18,7 @@ import Supporters from "./Pages/Supporters"
 import ContactPage from "./Pages/ContactPage"
 import Team from "./Pages/Team"
 import Gallery from "./Pages/Gallery"
+import FoundationCertificates from "./Pages/FoundationCertificates"
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
         <Route path="/team" element={<Team/>}/>
         <Route path="/contact" element={<ContactPage/>}/>
         <Route path="/gallery" element={<Gallery/>}/>
+        <Route path="/certificates" element={<FoundationCertificates/>}/>
       </Routes>
     <Footer/>
     <FloatingButtons/>
