@@ -12,6 +12,7 @@ import {
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import ContactHero from "../Components/ContactHero";
+import BankDetails from "../Components/BankDetails";
 
 const ContactPage = () => {
   return (
@@ -172,6 +173,7 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
+      <BankDetails/>
     </>
   );
 };
