@@ -23,7 +23,7 @@ import hero1 from "../assets/images/hero/h3.jpg";
 import hero2 from "../assets/images/hero/h2.jpg";
 import hero3 from "../assets/images/hero/h1.jpg";
 import hero4 from "../assets/images/gallery/g1.jpg";
-import DonateQRModal from "./DonateQrModal";
+import DonateQRModal from "./DonateQRModal";
 
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -12,7 +12,7 @@ import hero4 from "../assets/images/gallery/g4.jpg"; // Community Support
 import hero5 from "../assets/images/gallery/g5.jpg"; // Volunteer Work
 // Background
 import bgHero from "../assets/images/bg.avif";
-import DonateQRModal from "./DonateQrModal";
+import DonateQRModal from "./DonateQRModal";
 
 const SLIDES = [
   {
