@@ -23,7 +23,7 @@ import panImg from "../assets/images/pan.jpg";
 /* ===================== DATA ===================== */
 const certificates = [
   {
-    title: "Test",
+    title: "TAN Allotment Letter",
     subtitle: "Tax Deduction Account Number",
     description:
       "Official TAN allotment issued by the Income Tax Department, authorizing HEH Foundation to deduct and remit tax in compliance with Indian tax regulations.",
