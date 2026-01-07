@@ -11,11 +11,7 @@ import {
 } from "react-icons/fa";
 
 /* ===================== PDF IMPORTS ===================== */
-import tanPdf from "../assets/certificates/tan-allotment.pdf";
-import udyamPdf from "../assets/certificates/udyam-registration.pdf";
-import udyamAnnexurePdf from "../assets/certificates/anexture-print-udyam-registration.pdf";
-import trustDeedPdf from "/trust-deed.pdf"; // from public
-import panPdf from "../assets/certificates/pan.pdf";
+
 
 /* ===================== IMAGE IMPORTS ===================== */
 import tanImg from "../assets/images/pdf-one.jpg";
@@ -32,7 +28,7 @@ const certificates = [
     description:
       "Official TAN allotment issued by the Income Tax Department, authorizing HEH Foundation to deduct and remit tax in compliance with Indian tax regulations.",
     icon: <FaUniversity />,
-    pdf: tanPdf,
+    pdf: "/certificates/tan-allotment.pdf",
     image: tanImg,
   },
   {
@@ -41,7 +37,7 @@ const certificates = [
     description:
       "Government-issued Udyam Registration recognizing HEH Foundation as a registered entity, strengthening credibility and transparency in operations.",
     icon: <FaCertificate />,
-    pdf: udyamPdf,
+    pdf: "/certificates/udyam-registration.pdf",
     image: udyamImg,
   },
   {
@@ -50,7 +46,7 @@ const certificates = [
     description:
       "Annexure document providing extended registration details under the Udyam framework, supporting institutional and regulatory verification.",
     icon: <FaRegFileAlt />,
-    pdf: udyamAnnexurePdf,
+    pdf: "/certificates/anexture-print-udyam-registration.pdf",
     image: annexureImg,
   },
   {
@@ -59,7 +55,7 @@ const certificates = [
     description:
       "Foundational legal document defining the objectives, governance structure, and charitable purpose of HEH Foundation.",
     icon: <FaBalanceScale />,
-    pdf: trustDeedPdf,
+    pdf: "/certificates/trust-deed.pdf",
     image: trustImg,
   },
   {
@@ -68,7 +64,7 @@ const certificates = [
     description:
       "Official PAN issued to HEH Foundation, enabling lawful financial transactions, donations, and statutory compliance.",
     icon: <FaIdCard />,
-    pdf: panPdf,
+    pdf: "/certificates/pan.pdf",
     image: panImg,
   },
 ];
