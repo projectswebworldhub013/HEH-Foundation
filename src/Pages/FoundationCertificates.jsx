@@ -26,7 +26,7 @@ const certificates = [
     title: "TAN Allotment Letter",
     subtitle: "Tax Deduction Account Number",
     description:
-      "No Description.",
+      "Official TAN allotment issued by the Income Tax Department, authorizing HEH Foundation to deduct and remit tax in compliance with Indian tax regulations.",
     icon: <FaUniversity />,
     pdf: "/certificates/tan-allotment.pdf",
     image: tanImg,
@@ -94,7 +94,7 @@ export default function FoundationCertificates() {
   };
 
   return (
-    <section className="bg-[#fdf9f4] py-16 mt-28">
+    <section className="bg-[#ff8c00] py-16 mt-28">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* ================= HEADER ================= */}
