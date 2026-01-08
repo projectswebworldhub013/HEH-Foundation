@@ -1,17 +1,15 @@
 {
-  "headers": [
+  "routes": [
     {
-      "source": "/certificates/(.*)\\.pdf",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/pdf"
-        },
-        {
-          "key": "Content-Disposition",
-          "value": "inline"
-        }
-      ]
+      "src": "^/certificates/(.*)\\.pdf$",
+      "dest": "/certificates/$1.pdf"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
