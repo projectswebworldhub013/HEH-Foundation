@@ -94,7 +94,7 @@ export default function FoundationCertificates() {
   };
 
   return (
-    <section className="bg-[#fffcf8] py-16 mt-28">
+    <section className="bg-[#ff9100] py-16 mt-28">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* ================= HEADER ================= */}
