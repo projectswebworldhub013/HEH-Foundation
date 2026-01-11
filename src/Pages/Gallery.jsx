@@ -98,7 +98,7 @@ export default function Gallery() {
     <>
       <GalleryHero />
 
-      <section className="w-full py-20 px-4 bg-[#fff8f8]">
+      <section className="w-full pt-18 px-4 bg-[#fff8f8]">
         {galleryGroups.map((group, gIndex) => {
           const blocks = [];
           for (let i = 0; i < group.images.length; i += 6) {
@@ -106,7 +106,7 @@ export default function Gallery() {
           }
 
           return (
-            <div key={gIndex} className="max-w-7xl mx-auto" id="gallery">
+            <div key={gIndex} className="max-w-7xl mx-auto mb-28" id="gallery">
               {/* Header */}
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
