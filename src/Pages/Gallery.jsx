@@ -106,7 +106,7 @@ export default function Gallery() {
           }
 
           return (
-            <div key={gIndex} className="max-w-7xl mx-auto mb-28" id="gallery">
+            <div key={gIndex} className="max-w-7xl mx-auto mb-18" id="gallery">
               {/* Header */}
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
