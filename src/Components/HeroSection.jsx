@@ -12,7 +12,9 @@ import hero4 from "../assets/images/gallery/g4.jpg"; // Community Support
 import hero5 from "../assets/images/gallery/g5.jpg"; // Volunteer Work
 // Background
 import bgHero from "../assets/images/bg.avif";
-import DonateQRModal from "./DonateQRModal";
+
+// 🔥 Donation Popup
+import DonatePopup from "./DonatePopup";
 
 const SLIDES = [
   {
@@ -51,7 +53,7 @@ export default function HeroSection() {
   const [active, setActive] = useState(0);
   const [fade, setFade] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
-  const [showQR, setShowQR] = useState(false); 
+  const [showDonate, setShowDonate] = useState(false);
 
   // 🔁 AUTO SLIDE
   useEffect(() => {
@@ -63,7 +65,7 @@ export default function HeroSection() {
         setActive((prev) => (prev + 1) % SLIDES.length);
         setFade(false);
       }, 300);
-    }, 5000); // 5 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [showVideo]);
@@ -110,12 +112,11 @@ export default function HeroSection() {
           {/* CTA */}
           <div className="flex flex-wrap gap-4 mt-8">
             <button
-  onClick={() => setShowQR(true)}
-  className="cursor-pointer px-7 py-3 rounded-full bg-[#E8590C] hover:bg-[#DC2626] text-white font-semibold shadow-lg transition"
->
-  Donate Now
-</button>
-
+              onClick={() => setShowDonate(true)}
+              className="cursor-pointer px-7 py-3 rounded-full bg-[#E8590C] hover:bg-[#DC2626] text-white font-semibold shadow-lg transition"
+            >
+              Donate Now
+            </button>
 
             <Link to="/contact">
               <button className="cursor-pointer border-2 border-[#1E4ED8] text-[#1E4ED8] hover:bg-[#1E4ED8] hover:text-white px-7 py-3 rounded-lg font-semibold transition">
@@ -233,11 +234,9 @@ export default function HeroSection() {
           </motion.div>
         )}
       </AnimatePresence>
-      <DonateQRModal
-  isOpen={showQR}
-  onClose={() => setShowQR(false)}
-/>
 
+      {/* 🔥 Donation Popup */}
+      <DonatePopup open={showDonate} onClose={() => setShowDonate(false)} />
     </section>
   );
 }

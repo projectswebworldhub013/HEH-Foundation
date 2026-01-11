@@ -18,17 +18,21 @@ import "swiper/css/pagination";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { Link } from "react-router-dom";
 
-// ✅ NGO Hero Images (education, health, humanitarian)
+// NGO Hero Images
 import hero1 from "../assets/images/hero/h3.jpg";
 import hero2 from "../assets/images/hero/h2.jpg";
 import hero3 from "../assets/images/hero/h1.jpg";
 import hero4 from "../assets/images/gallery/g1.jpg";
-import DonateQRModal from "./DonateQRModal";
+
+// ✅ NEW Donation Popup
+import DonatePopup from "./DonatePopup";
 
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = [hero1, hero2, hero3, hero4];
-  const [showQR, setShowQR] = useState(false);
+
+  const [showDonate, setShowDonate] = useState(false);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -62,23 +66,19 @@ export default function Hero() {
   return (
     <section className="mt-28 md:mt-14 relative w-full h-screen overflow-hidden ">
       {/* Background Images */}
-
-<div className="absolute inset-0">
-  {images.map((img, index) => (
-  <img
-    key={index}
-    src={img}
-    alt="HEH Foundation Impact"
-    className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[2000ms] ${
-      index === currentIndex ? "opacity-100" : "opacity-0"
-    }`}
-  />
-))}
-
-
-  <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/30" />
-</div>
-    
+      <div className="absolute inset-0">
+        {images.map((img, index) => (
+          <img
+            key={index}
+            src={img}
+            alt="HEH Foundation Impact"
+            className={`absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-[2000ms] ${
+              index === currentIndex ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/30" />
+      </div>
 
       {/* Hero Content */}
       <div className="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
@@ -104,7 +104,9 @@ export default function Hero() {
         </h1>
 
         <p className="mt-6 max-w-3xl text-[#E5E7EB] text-sm md:text-lg leading-relaxed">
-          <span className="text-[#F47A1F] font-semibold">Hunger Education & Healthcare Foundation</span>{" "}
+          <span className="text-[#F47A1F] font-semibold">
+            Hunger Education & Healthcare Foundation
+          </span>{" "}
           works to uplift children and underprivileged communities through
           education, health & nutrition programs, humanitarian aid, economic
           well-being, resilience building and child protection initiatives.
@@ -113,11 +115,11 @@ export default function Hero() {
         {/* CTA Buttons */}
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <button
-  onClick={() => setShowQR(true)}
-  className="cursor-pointer px-7 py-3 rounded-full bg-[#E8590C] hover:bg-[#DC2626] text-white font-semibold shadow-lg transition"
->
-  Donate Now
-</button>
+            onClick={() => setShowDonate(true)}
+            className="cursor-pointer px-7 py-3 rounded-full bg-[#E8590C] hover:bg-[#DC2626] text-white font-semibold shadow-lg transition"
+          >
+            Donate Now
+          </button>
 
           <Link
             to="/contact"
@@ -128,12 +130,10 @@ export default function Hero() {
         </div>
 
         {/* Impact Stats */}
-        <div className="mt-22 flex flex-wrap justify-center gap-10 text-white">
-          
-        </div>
+        <div className="mt-22 flex flex-wrap justify-center gap-10 text-white"></div>
       </div>
 
-      {/* Impact Cards */}
+      {/* Impact Cards Desktop */}
       <div className="absolute bottom-12 w-full hidden md:flex justify-center gap-6 px-6 z-20">
         {impactCards.map((card, i) => (
           <div
@@ -175,11 +175,9 @@ export default function Hero() {
           ))}
         </Swiper>
       </div>
-      <DonateQRModal
-  isOpen={showQR}
-  onClose={() => setShowQR(false)}
-/>
 
+      {/* 🔥 Premium Donation Popup */}
+      <DonatePopup open={showDonate} onClose={() => setShowDonate(false)} />
     </section>
   );
 }
