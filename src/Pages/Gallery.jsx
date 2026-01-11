@@ -1,4 +1,3 @@
-// src/pages/Gallery.jsx
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
@@ -32,31 +31,48 @@ const COLORS = {
 };
 
 export default function Gallery() {
-  const images = [
-    g6, g7, g8, g9, g10, g11, g12, g13,
-    g14, g15, g16, g17, g18, g19, g20
+  const galleryGroups = [
+    {
+      title: "Care & Dignity for the Elderly",
+      subtitle: "Old Age Support",
+      description:
+        "The images displayed above reflect the humanitarian efforts and community outreach initiatives undertaken by the employees and volunteers of HEH Foundation. These moments capture our team actively engaging with underprivileged communities, extending care and support to children and elderly individuals who face daily challenges due to limited resources. Through the distribution of essential clothing items such as blankets, sweaters, and warm garments, HEH Foundation aims to provide comfort, dignity, and protection. These interactions reflect our unwavering commitment to compassion, empathy, and social responsibility.",
+      images: [g6, g7, g8, g9, g10, g11, g12],
+    },
+    {
+      title: "Empowering Futures Through Education",
+      subtitle: "Education Support",
+      description:
+        "The images displayed above reflect the unwavering commitment of HEH Foundation to empowering children in underprivileged communities through access to education. Each moment captured represents hope, opportunity, and the belief that every child deserves the tools to learn and grow. Through books, stationery, and hands-on support, HEH Foundation nurtures curiosity, confidence, and lifelong learning.",
+      images: [g13, g14, g15, g16, g17, g18, g19, g20, g6, g7, g8, g9, g10],
+    },
+    {
+      title: "Nourishing Lives with Compassion",
+      subtitle: "Food Distribution",
+      description:
+        "The images displayed here reflect the heartfelt commitment and humanitarian spirit of the HEH Foundation. Our team actively supports children and elderly individuals by distributing nutritious food with dignity and respect. These moments reflect our mission to stand beside vulnerable communities and provide care that fosters security and well-being.",
+      images: [g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g6],
+    },
+    {
+      title: "The People Behind the Mission",
+      subtitle: "Our Team",
+      description:
+        "These images reflect the dedication and compassion of the HEH Foundation team after long days of serving underprivileged communities. Tired yet inspired, our team members embody resilience, empathy, and commitment. They are not just employees — they are changemakers creating lasting impact through service and purpose.",
+      images: [g7, g8, g9, g10, g11, g12, g13, g14, g15],
+    },
   ];
 
   const [selectedIndex, setSelectedIndex] = useState(null);
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  /* Detect screen size */
-  useEffect(() => {
-    const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const visibleImages = isDesktop ? images.slice(0, images.length - 1) : images;
+  const [activeGroup, setActiveGroup] = useState([]);
 
   const closeModal = () => setSelectedIndex(null);
-  const prevImage = () =>
-    setSelectedIndex((prev) => (prev > 0 ? prev - 1 : visibleImages.length - 1));
-  const nextImage = () =>
-    setSelectedIndex((prev) => (prev < visibleImages.length - 1 ? prev + 1 : 0));
 
-  /* Keyboard */
+  const prevImage = () =>
+    setSelectedIndex((prev) => (prev > 0 ? prev - 1 : activeGroup.length - 1));
+
+  const nextImage = () =>
+    setSelectedIndex((prev) => (prev < activeGroup.length - 1 ? prev + 1 : 0));
+
   useEffect(() => {
     const handleKey = (e) => {
       if (selectedIndex !== null) {
@@ -67,99 +83,72 @@ export default function Gallery() {
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, [selectedIndex]);
+  }, [selectedIndex, activeGroup]);
 
   return (
     <>
       <GalleryHero />
 
-      {/* GALLERY SECTION */}
-      <section
-        className="w-full py-16 px-4 bg-[#fff8f8]"
-        id="gallery"
-      >
+      <section className="w-full py-20 px-4 bg-[#fff8f8]">
+        {galleryGroups.map((group, gIndex) => (
+          <div key={gIndex} className="max-w-7xl mx-auto mb-32">
+            {/* Group Header */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-14 relative"
+            >
+              <div className="absolute inset-0 flex justify-center">
+                <div className="w-[350px] h-[350px] bg-[#F47A1F]/10 blur-[120px] rounded-full"></div>
+              </div>
 
-<div className="max-w-7xl mx-auto text-center mb-16 relative">
+              <p className="uppercase tracking-widest text-xs text-[#F47A1F] font-semibold">
+                {group.subtitle}
+              </p>
 
-  {/* Soft background glow */}
-  <div className="absolute inset-0 flex justify-center">
-    <div className="w-72 h-72 bg-[#F47A1F]/10 blur-3xl rounded-full -z-10"></div>
-  </div>
+              <h2 className="text-3xl md:text-5xl font-bold mt-3 text-[#0B1F33]">
+                {group.title}
+              </h2>
 
-  {/* Top badge */}
-  <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border mb-5"
-       style={{ borderColor: COLORS.border, backgroundColor: "#FFF" }}>
-    <Sparkles size={14} className="text-[#F47A1F]" />
-    <span
-      className="text-xs tracking-widest uppercase font-semibold"
-      style={{ color: COLORS.navy }}
-    >
-      Our Journey in Action
-    </span>
-  </div>
+              <p className="mt-6 max-w-4xl mx-auto text-gray-600 leading-relaxed">
+                {group.description}
+              </p>
+            </motion.div>
 
-  {/* Main Heading */}
-  <h2
-    className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight"
-    style={{ color: COLORS.heading }}
-  >
-    Our{" "}
-    <span className="relative inline-block">
-      <span className="relative z-10">Moments of Impact</span>
-      {/* <span className="absolute left-0 bottom-1 w-full h-3 bg-[#F47A1F]/25 -z-0 rounded-sm"></span> */}
-    </span>
-  </h2>
+            {/* Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+              {group.images.map((src, index) => {
+                const isLarge = index % 7 === 0 || index % 7 === 3;
 
-  {/* Decorative divider */}
-  <div className="flex items-center justify-center gap-3 mt-6">
-    <span className="w-10 h-[2px] bg-[#E5E7EB]"></span>
-    <HeartHandshake size={22} className="text-[#F47A1F]" />
-    <span className="w-10 h-[2px] bg-[#E5E7EB]"></span>
-  </div>
-
-  {/* Description */}
-  <p
-    className="mt-6 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed"
-    style={{ color: COLORS.text }}
-  >
-    A visual reflection of{" "}
-    <span className="font-semibold text-[#0B1F33]">
-      compassion in action
-    </span>{" "}
-    — restoring dignity, building hope, and standing beside communities
-    with purpose and care.
-  </p>
-</div>
-
-
-        {/* GRID */}
-        <div className="max-w-7xl mx-auto grid grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
-          {visibleImages.map((src, index) => {
-            const isLarge = index % 6 === 0 || index % 6 === 1;
-
-            return (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.05 }}
-                onClick={() => setSelectedIndex(index)}
-                className={`relative overflow-hidden cursor-pointer rounded-xl border bg-white
-                  aspect-square
-                  ${isLarge ? "lg:col-span-2 lg:aspect-[16/10]" : ""}
-                `}
-                style={{ borderColor: COLORS.border }}
-              >
-                <img
-                  src={src}
-                  alt={`HEH Gallery ${index + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
-                />
-              </motion.div>
-            );
-          })}
-        </div>
+                return (
+                  <motion.div
+                    key={index}
+                    whileHover={{ scale: 1.05 }}
+                    onClick={() => {
+                      setSelectedIndex(index);
+                      setActiveGroup(group.images);
+                    }}
+                    className={`relative overflow-hidden rounded-2xl border bg-white cursor-pointer ${
+                      isLarge ? "lg:col-span-2 lg:row-span-2" : ""
+                    }`}
+                    style={{ borderColor: COLORS.border }}
+                  >
+                    <img
+                      src={src}
+                      className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition"></div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        ))}
       </section>
 
-      {/* MODAL */}
+      {/* Modal */}
       <AnimatePresence>
         {selectedIndex !== null && (
           <motion.div
@@ -169,42 +158,35 @@ export default function Gallery() {
             exit={{ opacity: 0 }}
             style={{ backgroundColor: "rgba(0,0,0,0.9)" }}
           >
-            {/* Close */}
             <button
               onClick={closeModal}
-              className="absolute top-5 right-5 p-2 rounded-full text-white"
-              style={{ backgroundColor: COLORS.primary }}
+              className="absolute top-6 right-6 p-2 rounded-full bg-[#F47A1F] text-white"
             >
-              <X size={26} />
+              <X size={28} />
             </button>
 
-            {/* Image */}
-            <div className="relative max-w-5xl w-full flex items-center justify-center">
+            <div className="relative max-w-6xl w-full flex items-center justify-center">
               <motion.img
                 key={selectedIndex}
-                src={visibleImages[selectedIndex]}
-                alt="Gallery View"
-                className="max-h-[80vh] w-full object-contain rounded-xl"
+                src={activeGroup[selectedIndex]}
+                className="max-h-[85vh] w-full object-contain rounded-xl"
                 initial={{ scale: 0.95, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.95, opacity: 0 }}
               />
 
-              {/* Controls */}
               <button
                 onClick={prevImage}
-                className="absolute left-3 md:-left-12 p-2 rounded-full text-white"
-                style={{ backgroundColor: COLORS.primary }}
+                className="absolute left-4 md:-left-14 p-3 rounded-full bg-[#F47A1F] text-white"
               >
-                <ChevronLeft size={28} />
+                <ChevronLeft size={30} />
               </button>
 
               <button
                 onClick={nextImage}
-                className="absolute right-3 md:-right-12 p-2 rounded-full text-white"
-                style={{ backgroundColor: COLORS.primary }}
+                className="absolute right-4 md:-right-14 p-3 rounded-full bg-[#F47A1F] text-white"
               >
-                <ChevronRight size={28} />
+                <ChevronRight size={30} />
               </button>
             </div>
           </motion.div>

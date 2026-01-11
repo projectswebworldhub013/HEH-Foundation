@@ -21,26 +21,34 @@ import rudhin from "../assets/images/team/rudhin.jpeg";
 
 /* TEAM DATA */
 const team = [
+  
   {
     name: "Ms. Pooja V",
     role: "Founding Member",
     quote:
-      "At HEH Foundation, our focus is on creating equal opportunity and lasting change. Every initiative is designed to empower individuals with dignity, confidence, and a stronger future.",
+      "At HEH Foundation, our focus is on creating equal opportunity and lasting change through dignity-driven initiatives.",
     img: pooja,
   },
   {
     name: "Mr. Arshad R S",
     role: "Founding Member",
     quote:
-      "HEH Foundation stands on the belief that dignity is a basic right. Our work is driven by compassion, responsibility, and a commitment to uplift communities through action.",
+      "Our work is rooted in compassion and responsibility, ensuring dignity and access for every community we serve.",
     img: arshad,
   },
   {
-    name: "Mr. Salman",
+    name: "Salman Ul Arif",
     role: "Managing Director",
     quote:
-      "Leadership is about responsibility and impact. At HEH Foundation, we ensure every decision is purposeful, transparent, and aligned with creating meaningful social outcomes.",
+      "Every decision we take is guided by purpose, transparency, and measurable social impact.",
     img: salman,
+  },
+   {
+    name: "Vaishnav Singh",
+    role: "Team Manager",
+    quote:
+      "Clear coordination and disciplined execution help translate vision into meaningful action.",
+    img: vaishnav,
   },
   {
   name: "Mr. Rudhin Raj",
@@ -50,38 +58,31 @@ const team = [
   img: rudhin,
 },
   {
-    name: "Mr. Vaishnav Balaji Singh",
-    role: "Team Manager",
-    quote:
-      "Strong coordination and clear execution are essential for impact. My role is to ensure our initiatives run efficiently while staying true to the foundation’s mission.",
-    img: vaishnav,
-  },
-  {
     name: "Sayana Unnikrishnan",
     role: "Team Leader",
     quote:
-      "Effective leadership begins with collaboration. I believe meaningful change happens when teams work with empathy, clarity, and a shared sense of purpose.",
+      "Collaboration and empathy are key to building strong teams and lasting community impact.",
     img: sayana,
   },
   {
     name: "Mursil Zaman",
     role: "Fundraising Executive",
     quote:
-      "Fundraising is about building trust and shared vision. Connecting supporters to our mission helps transform generosity into sustainable social impact.",
+      "Building trust with supporters helps turn generosity into sustainable impact.",
     img: murshil,
   },
   {
     name: "Advaith P",
     role: "Fundraising Executive",
     quote:
-      "Every contribution matters. My focus is to connect meaningful causes with committed supporters, ensuring transparency and long-term value.",
+      "Connecting purpose-driven people with meaningful causes is at the heart of my work.",
     img: advaith,
   },
   {
     name: "Nanda Kishor",
     role: "Fundraising Executive",
     quote:
-      "Sustainable change grows through collective support. By clearly sharing our vision, we strengthen partnerships that help expand our impact.",
+      "Strong partnerships allow us to scale impact and support long-term change.",
     img: nanda,
   },
 ];
