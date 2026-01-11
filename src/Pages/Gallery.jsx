@@ -98,7 +98,7 @@ export default function Gallery() {
     <>
       <GalleryHero />
 
-      <section className="w-full py-20 px-4 bg-[#fff8f8]">
+      <section className="w-full pt-12 px-4 bg-[#fff8f8]">
         {galleryGroups.map((group, gIndex) => {
           const blocks = [];
           for (let i = 0; i < group.images.length; i += 6) {
