@@ -33,6 +33,10 @@ import ng7 from "../assets/images/gallery/ng7.jpeg";
 import ng8 from "../assets/images/gallery/ng8.jpeg";
 import ng9 from "../assets/images/gallery/ng9.jpeg";
 import ng10 from "../assets/images/gallery/ng10.jpeg";
+import tg1 from "../assets/images/gallery/tg1.jpeg";
+import tg2 from "../assets/images/gallery/tg2.jpeg";
+import tg3 from "../assets/images/gallery/tg3.jpeg";
+import tg4 from "../assets/images/gallery/tg4.jpeg";
 
 
 /* HEH COLOR SYSTEM */
@@ -72,7 +76,7 @@ export default function Gallery() {
       subtitle: "Our Team",
       description:
         "These images reflect the dedication and compassion of the HEH Foundation team after long days of serving underprivileged communities. Tired yet inspired, our team members embody resilience, empathy, and commitment. They are not just employees — they are changemakers creating lasting impact through service and purpose.",
-      images: [g7, g8, g9, g10, g11, g12, g13, g14, g15],
+      images: [tg1, tg2, tg3, tg4],
     },
   ];
 
