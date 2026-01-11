@@ -34,43 +34,44 @@ import ng7 from "../assets/images/gallery/ng7.jpeg";
 import ng8 from "../assets/images/gallery/ng8.jpeg";
 import ng9 from "../assets/images/gallery/ng9.jpeg";
 import ng10 from "../assets/images/gallery/ng10.jpeg";
+import ng11 from "../assets/images/gallery/ng11.jpeg";
+import ng12 from "../assets/images/gallery/ng12.jpeg";
 
 import tg1 from "../assets/images/gallery/tg1.jpeg";
-import tg2 from "../assets/images/gallery/tg2.jpeg";
 import tg3 from "../assets/images/gallery/tg3.jpeg";
-import tg4 from "../assets/images/gallery/tg4.jpeg";
 
 export default function Gallery() {
-  const galleryGroups = [
-    {
-      title: "Care & Dignity for the Elderly",
-      subtitle: "Old Age Support",
-      description:
-        "The images displayed above reflect the humanitarian efforts and community outreach initiatives undertaken by the employees and volunteers of HEH Foundation...",
-      images: [og1, og2, og3, og4, og5, og6],
-    },
-    {
-      title: "Empowering Futures Through Education",
-      subtitle: "Education Support",
-      description:
-        "The images displayed above reflect the unwavering commitment of HEH Foundation to empowering children...",
-      images: [eg1, eg2, eg3, eg4, eg5, eg6, eg7, eg8, eg9, eg10, eg11, eg12],
-    },
-    {
-      title: "Nourishing Lives with Compassion",
-      subtitle: "Food Distribution",
-      description:
-        "The images displayed here reflect the heartfelt commitment and humanitarian spirit of the HEH Foundation...",
-      images: [ng1, ng2, ng3, ng4, ng5, ng6, ng7, ng8, ng9, ng10],
-    },
-    {
-      title: "The People Behind the Mission",
-      subtitle: "Our Team",
-      description:
-        "These images reflect the dedication and compassion of the HEH Foundation team...",
-      images: [tg1, tg2, tg3, tg4],
-    },
-  ];
+ const galleryGroups = [
+  {
+    title: "Empowering Futures Through Education",
+    subtitle: "Education Support",
+    description:
+      "The images below reflect HEH Foundation’s commitment to empowering underprivileged children through education. With books, learning materials, and personal guidance, we nurture curiosity, confidence, and brighter futures.",
+    images: [eg1, eg2, eg3, eg4, eg5, eg6, eg7, eg8, eg9, eg10, eg11, eg12],
+  },
+  {
+    title: "Care & Dignity for the Elderly",
+    subtitle: "Old Age Support",
+    description:
+      "The images below highlight the compassionate work of HEH Foundation volunteers supporting elderly and vulnerable individuals. By providing warm clothing and essential care, we help restore dignity, comfort, and emotional well-being to those who need it most.",
+    images: [og1, og2, og3, og4, og5, og6],
+  },
+  {
+    title: "Nourishing Lives with Compassion",
+    subtitle: "Food Distribution",
+    description:
+      "The images below showcase HEH Foundation’s efforts to provide nutritious meals to children and the elderly. Every meal served brings not just nourishment, but care, dignity, and hope to those facing hardship.",
+    images: [ng1, ng2, ng3, ng4, ng5, ng6, ng11, ng8, ng9, ng10, ng7, ng12],
+  },
+  {
+    title: "The People Behind the Mission",
+    subtitle: "Our Team",
+    description:
+      "The images below feature the dedicated HEH Foundation team whose passion and commitment drive every initiative. Their tireless efforts transform compassion into real-world impact.",
+    images: [tg1, tg3],
+  },
+];
+
 
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [activeGroup, setActiveGroup] = useState([]);
@@ -128,7 +129,6 @@ export default function Gallery() {
               <div className="space-y-24">
                 {blocks.map((set, blockIndex) => (
                   <div key={blockIndex} className="space-y-6">
-
                     {/* TWO LARGE */}
                     <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-6">
                       {set.slice(0, 2).map((img, i) => (
@@ -139,9 +139,12 @@ export default function Gallery() {
                             setSelectedIndex(blockIndex * 6 + i);
                             setActiveGroup(group.images);
                           }}
-                          className="relative cursor-pointer aspect-square md:aspect-auto md:h-[420px] rounded-2xl md:rounded-3xl overflow-hidden shadow-xl md:shadow-2xl"
+                          className="relative cursor-pointer aspect-square md:aspect-auto md:h-[380px] rounded-2xl md:rounded-3xl overflow-hidden shadow-xl md:shadow-2xl"
                         >
-                          <img src={img} className="w-full h-full object-cover" />
+                          <img
+                            src={img}
+                            className="w-full h-full object-cover"
+                          />
                         </motion.div>
                       ))}
                     </div>
@@ -158,11 +161,13 @@ export default function Gallery() {
                           }}
                           className="relative cursor-pointer aspect-square md:aspect-auto md:h-[220px] rounded-2xl overflow-hidden shadow-lg md:shadow-xl"
                         >
-                          <img src={img} className="w-full h-full object-cover" />
+                          <img
+                            src={img}
+                            className="w-full h-full object-cover"
+                          />
                         </motion.div>
                       ))}
                     </div>
-
                   </div>
                 ))}
               </div>
@@ -180,7 +185,10 @@ export default function Gallery() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <button onClick={closeModal} className="absolute top-6 right-6 text-white">
+            <button
+              onClick={closeModal}
+              className="absolute top-6 right-6 text-white"
+            >
               <X size={32} />
             </button>
 

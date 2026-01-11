@@ -28,7 +28,7 @@ const GalleryHero = () => {
 
         {/* Heading */}
         <h1
-          className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-snug text-[#F9FAF7]"
+          className="text-3xl sm:text-4xl lg:text-5xl font-semibold leading-snug text-[#F9FAF7]"
           style={{
             textShadow:
               "0 2px 12px rgba(0,0,0,0.45), 0 6px 24px rgba(0,0,0,0.35)",

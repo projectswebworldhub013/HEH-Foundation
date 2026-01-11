@@ -28,8 +28,10 @@ import {
   FaCogs,
   FaUsers,
   FaFileAlt,
+  FaHeart,
 } from "react-icons/fa";
 import { FaUserGroup, FaXTwitter } from "react-icons/fa6";
+import DonatePopup from "../Components/DonatePopup";
 
 import logo from "../assets/images/logo-heh.png";
 
@@ -38,6 +40,7 @@ export default function Navbar() {
   const [showTop, setShowTop] = useState(true);
   const [workOpen, setWorkOpen] = useState(false);
   const [whoOpen, setWhoOpen] = useState(false);
+  const [showDonate, setShowDonate] = useState(false);
 
   const navLinks = [
     { name: "Home", path: "/", icon: <FaHome /> },
@@ -154,16 +157,24 @@ useEffect(() => {
             
           </ul>
 
-          {/* Desktop Social Icons */}
-          <div className="hidden md:flex gap-5 text-lg">
-            <a href="https://in.pinterest.com/hehfoundation/" target="_blank" rel="noreferrer" className="text-[#E60023] hover:scale-110"><FaPinterestP /></a>
-            <a href="https://www.instagram.com/heh_foundation_official" target="_blank" rel="noreferrer" className="text-[#E1306C] hover:scale-110"><FaInstagram /></a>
-            <a href="https://x.com/hehfoundation" target="_blank" rel="noreferrer" className="hover:scale-110"><FaXTwitter /></a>
-            <a href="https://www.youtube.com/@hehfoundation" target="_blank" rel="noreferrer" className="text-[#FF0000] hover:scale-110"><FaYoutube /></a>
-            <a href="https://www.facebook.com/profile.php?id=61584475671866" target="_blank" rel="noreferrer" className="text-[#1877F2] hover:scale-110"><FaFacebookF /></a>
-            <a href="https://www.linkedin.com/company/hunger-education-healthcare-foundation/" target="_blank" rel="noreferrer" className="text-[#0A66C2] hover:scale-110"><FaLinkedinIn /></a>
-            <a href="https://t.me/hehfoundation" target="_blank" rel="noreferrer" className="text-[#229ED9] hover:scale-110"><FaTelegramPlane /></a>
-          </div>
+          {/* Desktop Donate Button */}
+<div className="hidden md:flex">
+ <button
+  onClick={() => setShowDonate(true)}
+  className="group relative flex items-center gap-2 px-5 py-2.5
+  text-[13.5px] font-semibold text-white rounded-full
+  bg-gradient-to-r from-[#F47A1F] to-[#E8590C]
+  hover:scale-[1.03]
+  transition-all duration-300 ease-out cursor-pointer"
+>
+  <FaHeart className="text-[13px] opacity-90 group-hover:scale-110 transition" />
+  <span>Donate Now</span>
+
+  {/* soft glow */}
+  <span className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 transition" />
+</button>
+</div>
+
 
           {/* Mobile Button */}
           <button className="md:hidden" onClick={() => setMenuOpen(true)}>
@@ -192,6 +203,8 @@ useEffect(() => {
 
   {/* Content */}
   <div className="h-full overflow-y-auto px-5 py-4 space-y-4">
+    
+
     {/* Primary Links */}
     {navLinks.map((link, i) => (
       <Link
@@ -306,6 +319,7 @@ useEffect(() => {
           100% { transform: translateX(-50%); }
         }
       `}</style>
+      <DonatePopup open={showDonate} onClose={() => setShowDonate(false)} />
     </header>
   );
 }
