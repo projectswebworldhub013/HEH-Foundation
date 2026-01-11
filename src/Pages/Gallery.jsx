@@ -5,12 +5,12 @@ import { HeartHandshake, Sparkles } from "lucide-react";
 import GalleryHero from "../Components/GalleryHero";
 
 /* Gallery Images */
-import g6 from "../assets/images/gallery/g6.jpg";
-import g7 from "../assets/images/gallery/g7.jpg";
-import g8 from "../assets/images/gallery/g13.jpg";
-import g9 from "../assets/images/gallery/g9.jpg";
-import g10 from "../assets/images/gallery/g10.jpg";
-import g11 from "../assets/images/gallery/g11.jpg";
+import og1 from "../assets/images/gallery/og1.jpeg";
+import og2 from "../assets/images/gallery/og2.jpeg";
+import og3 from "../assets/images/gallery/og3.jpeg";
+import og4 from "../assets/images/gallery/og4.jpeg";
+import og5 from "../assets/images/gallery/og5.jpeg";
+import og6 from "../assets/images/gallery/og6.jpeg";
 import g12 from "../assets/images/gallery/g12.jpg";
 import g13 from "../assets/images/gallery/g8.jpg";
 import g14 from "../assets/images/gallery/g14.jpg";
@@ -37,21 +37,21 @@ export default function Gallery() {
       subtitle: "Old Age Support",
       description:
         "The images displayed above reflect the humanitarian efforts and community outreach initiatives undertaken by the employees and volunteers of HEH Foundation. These moments capture our team actively engaging with underprivileged communities, extending care and support to children and elderly individuals who face daily challenges due to limited resources. Through the distribution of essential clothing items such as blankets, sweaters, and warm garments, HEH Foundation aims to provide comfort, dignity, and protection. These interactions reflect our unwavering commitment to compassion, empathy, and social responsibility.",
-      images: [g6, g7, g8, g9, g10, g11, g12],
+      images: [og1, og2, og3, og4, og5, og6],
     },
     {
       title: "Empowering Futures Through Education",
       subtitle: "Education Support",
       description:
         "The images displayed above reflect the unwavering commitment of HEH Foundation to empowering children in underprivileged communities through access to education. Each moment captured represents hope, opportunity, and the belief that every child deserves the tools to learn and grow. Through books, stationery, and hands-on support, HEH Foundation nurtures curiosity, confidence, and lifelong learning.",
-      images: [g13, g14, g15, g16, g17, g18, g19, g20, g6, g7, g8, g9, g10],
+      images: [g13, g14, g15, g16, g17, g18, g19, g20, og6, g7, g8, g9, g10],
     },
     {
       title: "Nourishing Lives with Compassion",
       subtitle: "Food Distribution",
       description:
         "The images displayed here reflect the heartfelt commitment and humanitarian spirit of the HEH Foundation. Our team actively supports children and elderly individuals by distributing nutritious food with dignity and respect. These moments reflect our mission to stand beside vulnerable communities and provide care that fosters security and well-being.",
-      images: [g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, g6],
+      images: [g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, og6],
     },
     {
       title: "The People Behind the Mission",
