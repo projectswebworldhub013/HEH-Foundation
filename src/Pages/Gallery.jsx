@@ -23,6 +23,17 @@ import eg9 from "../assets/images/gallery/eg9.jpeg";
 import eg10 from "../assets/images/gallery/eg10.jpeg";
 import eg11 from "../assets/images/gallery/eg11.jpeg";
 import eg12 from "../assets/images/gallery/eg12.jpeg";
+import ng1 from "../assets/images/gallery/ng1.jpeg";
+import ng2 from "../assets/images/gallery/ng2.jpeg";
+import ng3 from "../assets/images/gallery/ng3.jpeg";
+import ng4 from "../assets/images/gallery/ng4.jpeg";
+import ng5 from "../assets/images/gallery/ng5.jpeg";
+import ng6 from "../assets/images/gallery/ng6.jpeg";
+import ng7 from "../assets/images/gallery/ng7.jpeg";
+import ng8 from "../assets/images/gallery/ng8.jpeg";
+import ng9 from "../assets/images/gallery/ng9.jpeg";
+import ng10 from "../assets/images/gallery/ng10.jpeg";
+
 
 /* HEH COLOR SYSTEM */
 const COLORS = {
@@ -54,7 +65,7 @@ export default function Gallery() {
       subtitle: "Food Distribution",
       description:
         "The images displayed here reflect the heartfelt commitment and humanitarian spirit of the HEH Foundation. Our team actively supports children and elderly individuals by distributing nutritious food with dignity and respect. These moments reflect our mission to stand beside vulnerable communities and provide care that fosters security and well-being.",
-      images: [g11, g12, g13, g14, g15, g16, g17, g18, g19, g20, og6],
+      images: [ng1, ng2, ng3, ng4, ng5, ng6, ng7, ng8, ng9, ng10],
     },
     {
       title: "The People Behind the Mission",
