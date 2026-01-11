@@ -11,15 +11,18 @@ import og3 from "../assets/images/gallery/og3.jpeg";
 import og4 from "../assets/images/gallery/og4.jpeg";
 import og5 from "../assets/images/gallery/og5.jpeg";
 import og6 from "../assets/images/gallery/og6.jpeg";
-import g12 from "../assets/images/gallery/g12.jpg";
-import g13 from "../assets/images/gallery/g8.jpg";
-import g14 from "../assets/images/gallery/g14.jpg";
-import g15 from "../assets/images/gallery/g15.jpg";
-import g16 from "../assets/images/gallery/g16.jpg";
-import g17 from "../assets/images/gallery/g19.jpg";
-import g18 from "../assets/images/gallery/g18.jpg";
-import g19 from "../assets/images/gallery/g17.jpg";
-import g20 from "../assets/images/gallery/g21.jpg";
+import eg1 from "../assets/images/gallery/eg1.jpeg";
+import eg2 from "../assets/images/gallery/eg2.jpeg";
+import eg3 from "../assets/images/gallery/eg3.jpeg";
+import eg4 from "../assets/images/gallery/eg4.jpeg";
+import eg5 from "../assets/images/gallery/eg5.jpeg";
+import eg6 from "../assets/images/gallery/eg6.jpeg";
+import eg7 from "../assets/images/gallery/eg7.jpeg";
+import eg8 from "../assets/images/gallery/eg8.jpeg";
+import eg9 from "../assets/images/gallery/eg9.jpeg";
+import eg10 from "../assets/images/gallery/eg10.jpeg";
+import eg11 from "../assets/images/gallery/eg11.jpeg";
+import eg12 from "../assets/images/gallery/eg12.jpeg";
 
 /* HEH COLOR SYSTEM */
 const COLORS = {
@@ -44,7 +47,7 @@ export default function Gallery() {
       subtitle: "Education Support",
       description:
         "The images displayed above reflect the unwavering commitment of HEH Foundation to empowering children in underprivileged communities through access to education. Each moment captured represents hope, opportunity, and the belief that every child deserves the tools to learn and grow. Through books, stationery, and hands-on support, HEH Foundation nurtures curiosity, confidence, and lifelong learning.",
-      images: [g13, g14, g15, g16, g17, g18, g19, g20, og6, g7, g8, g9, g10],
+      images: [eg1, eg2, eg3, eg4, eg5, eg6, eg7, eg8, eg9, eg10, eg11, eg12],
     },
     {
       title: "Nourishing Lives with Compassion",
