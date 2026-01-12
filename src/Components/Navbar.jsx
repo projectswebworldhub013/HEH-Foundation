@@ -298,14 +298,28 @@ useEffect(() => {
     <div className="my-6 h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
 
     {/* Social Icons */}
-    <div className="flex flex-wrap gap-4 text-lg justify-center pb-10">
-      <FaPinterestP className="text-[#E60023] hover:scale-110 transition" />
-      <FaInstagram className="text-[#E1306C] hover:scale-110 transition" />
-      <FaXTwitter className="hover:scale-110 transition" />
-      <FaYoutube className="text-[#FF0000] hover:scale-110 transition" />
-      <FaFacebookF className="text-[#1877F2] hover:scale-110 transition" />
-      <FaLinkedinIn className="text-[#0A66C2] hover:scale-110 transition" />
-      <FaTelegramPlane className="text-[#229ED9] hover:scale-110 transition" />
+    <div className="flex flex-wrap gap-4 text-lg pb-20">
+      <a href="https://in.pinterest.com/hehfoundation/" target="_blank" rel="noreferrer" className="text-[#E60023] hover:scale-110 transition">
+              <FaPinterestP />
+            </a>
+            <a href="https://www.instagram.com/heh_foundation_official" target="_blank" rel="noreferrer" className="text-[#E1306C] hover:scale-110 transition">
+              <FaInstagram />
+            </a>
+            <a href="https://x.com/hehfoundation" target="_blank" rel="noreferrer" className="text-black hover:scale-110 transition">
+              <FaXTwitter />
+            </a>
+            <a href="https://www.youtube.com/@hehfoundation" target="_blank" rel="noreferrer" className="text-[#FF0000] hover:scale-110 transition">
+              <FaYoutube />
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61584475671866" target="_blank" rel="noreferrer" className="text-[#1877F2] hover:scale-110 transition">
+              <FaFacebookF />
+            </a>
+            <a href="https://www.linkedin.com/company/hunger-education-healthcare-foundation/" target="_blank" rel="noreferrer" className="text-[#0A66C2] hover:scale-110 transition">
+              <FaLinkedinIn />
+            </a>
+            <a href="https://t.me/hehfoundation" target="_blank" rel="noreferrer" className="text-[#229ED9] hover:scale-110 transition">
+              <FaTelegramPlane />
+            </a>
     </div>
   </div>
 </div>

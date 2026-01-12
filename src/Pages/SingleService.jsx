@@ -2,6 +2,7 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import faqBg from "../assets/images/faq-bg.jpg"; 
+import DonatePopup from "../Components/DonatePopup";
 
 import {
   FaQuoteLeft,
@@ -27,6 +28,7 @@ export default function SingleService() {
   );
 
   const [activeFaq, setActiveFaq] = React.useState(null);
+const [showDonate, setShowDonate] = React.useState(false);
 
   if (!service) {
     return (
@@ -117,20 +119,21 @@ export default function SingleService() {
                    justify-center md:justify-start"
       >
         {/* PRIMARY CTA */}
-        <Link
-          to="/donate"
-          className="group inline-flex items-center gap-2
-                     px-6 py-2.5 rounded-full
-                     bg-[#E8590C]
-                     text-white text-sm md:text-base font-semibold
-                     shadow-md
-                     hover:bg-[#DC2626]
-                     hover:shadow-lg
-                     transition-all duration-300"
-        >
-          <FaHeart className="text-white/90 group-hover:scale-110 transition" />
-          Donate Now
-        </Link>
+        <button
+  onClick={() => setShowDonate(true)}
+  className="group inline-flex items-center gap-2
+             px-6 py-2.5 rounded-full
+             bg-[#E8590C]
+             text-white text-sm md:text-base font-semibold
+             shadow-md
+             hover:bg-[#DC2626]
+             hover:shadow-lg
+             transition-all duration-300 cursor-pointer"
+>
+  <FaHeart className="text-white/90 group-hover:scale-110 transition" />
+  Donate Now
+</button>
+
 
         {/* SECONDARY CTA */}
         <Link
@@ -473,18 +476,21 @@ export default function SingleService() {
     <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
 
       {/* Donate */}
-      <Link
-        to="/donate"
-        className="group inline-flex items-center justify-center gap-2
-                   px-7 py-3 rounded-full
-                   bg-gradient-to-r from-[#F47A1F] to-[#DC2626]
-                   text-sm sm:text-base font-semibold
-                   shadow-md hover:shadow-xl
-                   transition-all duration-300"
-      >
-        <FaDonate className="text-sm group-hover:scale-110 transition" />
-        Donate Now
-      </Link>
+      <button
+  onClick={() => setShowDonate(true)}
+  className="group inline-flex items-center gap-2
+             px-6 py-2.5 rounded-full
+             bg-[#E8590C]
+             text-white text-sm md:text-base font-semibold
+             shadow-md
+             hover:bg-[#DC2626]
+             hover:shadow-lg
+             transition-all duration-300 cursor-pointer"
+>
+  <FaHeart className="text-white/90 group-hover:scale-110 transition" />
+  Donate Now
+</button>
+
 
       {/* Contact */}
       <Link
@@ -510,7 +516,11 @@ export default function SingleService() {
     </div>
   </div>
 </section>
+<DonatePopup
+  open={showDonate}
+  onClose={() => setShowDonate(false)}
+/>
 
     </div>
   );
-}
+} 
