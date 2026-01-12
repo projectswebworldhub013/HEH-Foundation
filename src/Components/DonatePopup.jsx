@@ -17,6 +17,22 @@ const monthlyOptions = [
   { amount: 2400, link: "https://rzp.io/rzp/CqzXnwcE" },
 ];
 
+const impactText = {
+  oneTime: {
+    6000: "Can help provide educational support to one child",
+    9000: "Can help provide healthcare support to one child",
+    12000: "Can help provide educational support to two children",
+    18000: "Can help provide healthcare support to two children",
+  },
+  monthly: {
+    800: "Can help provide continuous education support to one child",
+    1200: "Can help provide continuous healthcare support to one child",
+    1600: "Can help provide continuous education support to two children",
+    2400: "Can help provide continuous healthcare support to two children",
+  },
+};
+
+
 export default function DonatePopup({ open, onClose }) {
   const [mode, setMode] = useState("oneTime");
   const [selected, setSelected] = useState(null);
@@ -122,17 +138,18 @@ export default function DonatePopup({ open, onClose }) {
               </button>
 
               {/* Impact */}
-              <div className="bg-white text-[#374151] text-center py-2 rounded-lg text-xs border border-[#E5E7EB]">
-                {mode === "oneTime"
-                  ? "Can support one child’s education & learning material"
-                  : "Monthly support for meals, school & care"}
-              </div>
+              <div className="bg-white font-bold text-[#1f242c] text-center py-2 rounded-lg text-xs md:text-sm border border-[#E5E7EB]">
+  {selected
+    ? impactText[mode][selected.amount]
+    : "Select an amount to see the impact"}
+</div>
+
 
               {/* Donate */}
               <button
                 disabled={!selected}
                 onClick={proceed}
-                className="w-full py-3 bg-[#DC2626] text-white rounded-xl text-base font-bold tracking-wide hover:bg-red-700 transition disabled:opacity-40"
+                className="cursor-pointer w-full py-3 bg-[#DC2626] text-white rounded-xl text-base font-bold tracking-wide hover:bg-red-700 transition disabled:opacity-40"
               >
                 DONATE NOW
               </button>

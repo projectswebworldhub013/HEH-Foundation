@@ -79,9 +79,6 @@ const team = [
   },
 ];
 
-
-
-
 /* SOCIAL ICONS */
 const socials = [
   { icon: BsInstagram, link: "https://www.instagram.com" },
