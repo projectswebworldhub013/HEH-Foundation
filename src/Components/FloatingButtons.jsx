@@ -10,7 +10,7 @@ const FloatingButtons = () => {
   return (
     <motion.div
       className="fixed bottom-5 right-5 z-50 flex flex-col items-center gap-3"
-      animate={{ y: [0, -6, 0] }}                 // 🌊 floating motion
+      animate={{ y: [0, -6, 0] }}                 // floating motion
       transition={{
         duration: 4,
         repeat: Infinity,

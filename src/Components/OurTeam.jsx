@@ -22,13 +22,6 @@ import rudhin from "../assets/images/team/rudhin.jpeg";
 const team = [
   
   {
-    name: "Ms. Pooja V",
-    role: "Founding Member",
-    quote:
-      "At HEH Foundation, our focus is on creating equal opportunity and lasting change through dignity-driven initiatives.",
-    img: pooja,
-  },
-  {
     name: "Mr. Arshad R S",
     role: "Founding Member",
     quote:

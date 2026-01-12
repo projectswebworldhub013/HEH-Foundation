@@ -70,8 +70,7 @@ const ContactPage = () => {
                     <FaPhoneAlt />
                   </IconWrap>
                   <p className="text-[#374151] leading-relaxed">
-                    +91 7012502008 <br />
-                    +91 9980483859
+                    +91 7012502008 
                   </p>
                 </div>
 
