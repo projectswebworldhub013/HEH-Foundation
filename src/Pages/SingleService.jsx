@@ -43,7 +43,7 @@ const [showDonate, setShowDonate] = React.useState(false);
 
       {/* ================= CINEMATIC HERO ================= */}
       <section
-  className="relative min-h-[85vh] flex items-center bg-cover bg-center"
+  className="relative min-h-[75vh] md:min-h-[85vh] flex items-center bg-cover bg-center"
   style={{ backgroundImage: `url(${service.image})` }}
 >
   {/* OVERLAYS */}
@@ -115,7 +115,7 @@ const [showDonate, setShowDonate] = React.useState(false);
 
       {/* CTA BUTTONS */}
       <div
-        className="mt-7 flex flex-wrap gap-4
+        className="mt-7 flex  flex-wrap gap-4
                    justify-center md:justify-start"
       >
         {/* PRIMARY CTA */}
@@ -473,7 +473,7 @@ const [showDonate, setShowDonate] = React.useState(false);
     </p>
 
     {/* CTA Buttons */}
-    <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+    <div className="mt-8 flex sm:flex-row justify-center gap-4">
 
       {/* Donate */}
       <button
