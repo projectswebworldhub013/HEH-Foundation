@@ -19,6 +19,7 @@ import ContactPage from "./Pages/ContactPage"
 import Team from "./Pages/Team"
 import Gallery from "./Pages/Gallery"
 import FoundationCertificates from "./Pages/FoundationCertificates"
+import IssuePage from "./Pages/IssuePage"
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
     <ScrollToTop/>
     {/* <Navbar/> */}
       <Routes>
+         <Route path="*" element={<IssuePage/>}/>
         {/* <Route path="/" element={<Home/>}/>
         <Route path="/what-we-do/:slug" element={<SingleService />} />
         <Route path="/about" element={<About />}/>
@@ -42,9 +44,10 @@ function App() {
         <Route path="/contact" element={<ContactPage/>}/>
         <Route path="/gallery" element={<Gallery/>}/>
         <Route path="/certificates" element={<FoundationCertificates/>}/> */}
+        
       </Routes>
     {/* <Footer/> */}
-    <FloatingButtons/>
+    {/* <FloatingButtons/> */}
     </>
   )
 }
