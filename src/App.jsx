@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import Home from "./Pages/Home"
-// import Navbar from "./Components/Navbar"
-// import Footer from "./Components/Footer"
+import Navbar from "./Components/Navbar"
+import Footer from "./Components/Footer"
 import SingleService from "./Pages/SingleService"
 import ScrollToTop from "./Components/ScrollToTop"
 import FloatingButtons from "./Components/FloatingButtons"
@@ -19,17 +19,15 @@ import ContactPage from "./Pages/ContactPage"
 import Team from "./Pages/Team"
 import Gallery from "./Pages/Gallery"
 import FoundationCertificates from "./Pages/FoundationCertificates"
-import IssuePage from "./Pages/IssuePage"
 
 function App() {
 
   return (
     <>
     <ScrollToTop/>
-    {/* <Navbar/> */}
+    <Navbar/>
       <Routes>
-         <Route path="*" element={<IssuePage/>}/>
-        {/* <Route path="/" element={<Home/>}/>
+        <Route path="/" element={<Home/>}/>
         <Route path="/what-we-do/:slug" element={<SingleService />} />
         <Route path="/about" element={<About />}/>
         <Route path="/privacy-policy" element={<PrivacyPolicy/>}/>
@@ -43,11 +41,11 @@ function App() {
         <Route path="/team" element={<Team/>}/>
         <Route path="/contact" element={<ContactPage/>}/>
         <Route path="/gallery" element={<Gallery/>}/>
-        <Route path="/certificates" element={<FoundationCertificates/>}/> */}
+        <Route path="/certificates" element={<FoundationCertificates/>}/>
         
       </Routes>
-    {/* <Footer/> */}
-    {/* <FloatingButtons/> */}
+    <Footer/>
+    <FloatingButtons/>
     </>
   )
 }
