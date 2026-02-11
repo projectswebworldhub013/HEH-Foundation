@@ -11,11 +11,12 @@ const oneTimeOptions = [
 ];
 
 const monthlyOptions = [
-  { amount: 800, link: "https://rzp.io/rzp/JjJZ27Hg" },
-  { amount: 1200, link: "https://rzp.io/rzp/vLkEGca0" },
-  { amount: 1600, link: "https://rzp.io/rzp/kcMewnEs" },
-  { amount: 2400, link: "https://rzp.io/rzp/CqzXnwcE" },
+  { amount: 800, link: "https://rzp.io/rzp/DhBfF9dR" },
+  { amount: 1200, link: "https://rzp.io/rzp/uWCaOyU" },
+  { amount: 1600, link: "https://rzp.io/rzp/DjJPSxsm" },
+  { amount: 2400, link: "https://rzp.io/rzp/jn2G7Qc" },
 ];
+
 
 const impactText = {
   oneTime: {
