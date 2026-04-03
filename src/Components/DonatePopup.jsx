@@ -4,10 +4,10 @@ import { X } from "lucide-react";
 
 /* Payment Links */
 const oneTimeOptions = [
-  { amount: 6000, link: "https://rzp.io/rzp/XoWe9Mu" },
-  { amount: 9000, link: "https://rzp.io/rzp/Y42FoJpp" },
-  { amount: 12000, link: "https://rzp.io/rzp/Z48IjgDo" },
-  { amount: 18000, link: "https://rzp.io/rzp/o4PvAsDB" },
+  { amount: 6000, link: "https://rzp.io/rzp/ZbAnz3dF" },
+  { amount: 9000, link: "https://rzp.io/rzp/zRasBsb" },
+  { amount: 12000, link: "https://rzp.io/rzp/j5nqArPt" },
+  { amount: 18000, link: "https://rzp.io/rzp/ZRQ4PvpZ" },
 ];
 
 const monthlyOptions = [
