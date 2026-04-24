@@ -32,7 +32,7 @@ export default function IssuePage() {
 
         {/* Actions */}
         <div className="flex flex-col gap-3">
-          <button className="flex items-center justify-center gap-2 border border-black px-4 py-2 rounded-lg hover:bg-black hover:text-white transition">
+          <button className="flex items-center justify-center gap-2 border border-black px-4 py-2 rounded-lg hover:bg-black hover:text-white transition active:scale-95 transition">
             <RefreshCcw size={16} />
             Retry Request
           </button>
