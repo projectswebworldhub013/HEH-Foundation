@@ -7,8 +7,8 @@ import IssuePage from './Pages/IssuePage.jsx'
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
   <StrictMode>
-    {/* <App /> */}
-    <IssuePage />
+    <App />
+    {/* <IssuePage /> */}
   </StrictMode>
   </BrowserRouter>
 )
