@@ -37,10 +37,7 @@ export default function IssuePage() {
             Retry Request
           </button>
 
-          <button className="flex items-center justify-center gap-2 border border-black px-4 py-2 rounded-lg hover:bg-black hover:text-white transition">
-            <Home size={16} />
-            Go to Home
-          </button>
+          
         </div>
 
         {/* Footer hint */}
